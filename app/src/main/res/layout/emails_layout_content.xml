@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="EMAILS"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/under_construction_emails"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/orange"
+            android:textSize="11dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="UNDER CONSTRUCTION"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/closer_emails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/templatesContainer"
+        android:layout_marginTop="32dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_popup_backgroung"
+        android:orientation="vertical">
+
+    <include
+        layout="@layout/bar_emails"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/top_popup_backgroung" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</FrameLayout>

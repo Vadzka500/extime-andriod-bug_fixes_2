@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#87aade</color>
+    <color name="colorPrimaryDark">#567bac</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorAccent">#567bac</color>
+    <color name="gray">#9e9e9e</color>
+    <color name="gray_light">#BDBDBD</color>
+    <color name="gray_light_2">#E0E0E0</color>
+    <color name="gray_light_card">#fafafa</color>
+    <color name="gray_textView">#808080</color>
+    <color name="gray_dark">#616161</color>
+    <color name="ltgray">#e3e3e3</color>
+    <color name="black">#000000</color>
+    <color name="contactNewGreen">#00e676</color>
+    <color name="timelineGreen">#4caf50</color>
+    <color name="selectedCardBg">#e6e6e6</color>
+    <color name="darkAzure">#168ACD</color>
+    <color name="templateName">#00838F</color>
+    <color name="sortPopupLine">#e1e4e7</color>
+    <color name="icn_gray">#e2e5e8</color>
+    <color name="orange">#f6a623</color>
+    <color name="sortbarcolor">#f9fafa</color>
+    <color name="statusOrange">#f6a623</color>
+    <color name="pink">#ab47bc</color>
+
+    <color name="icon_orange">#e9842d</color>
+    <color name="popup_kanban_color">#414141</color>
+
+    <color name="draftColor">#e6595d</color>
+
+</resources>

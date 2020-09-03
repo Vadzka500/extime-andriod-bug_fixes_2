@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/socialInstas">
+
+
+    <FrameLayout
+
+        android:layout_width="27.8dp"
+        android:layout_height="27.8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="-3.2dp">
+
+        <ImageView
+            android:id="@+id/inst_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp"
+
+
+            android:src="@drawable/icn_social_instagram"/>
+
+        <ImageView
+            android:src="@drawable/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</FrameLayout>

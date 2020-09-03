@@ -1,0 +1,179 @@
+<resources>
+    <string name="app_name">Extime</string>
+
+    <string name="contacts">Contacts</string>
+    <string name="emails">Emails</string>
+    <string name="temails">TEmails</string>
+    <string name="log">Log</string>
+    <string name="timeline">Timeline</string>
+    <string name="schedule">Schedule</string>
+    <string name="places">Places</string>
+    <string name="files">Files</string>
+    <string name="orders">Orders</string>
+
+    <string name="status_bar">Status_bar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="recipiend"></string>
+
+    <string name="new_str">new</string>
+    <string name="company">Company</string>
+    <string name="share">Share</string>
+    <string name="remind">Remind</string>
+    <string name="call">Call</string>
+    <string name="edit">Edit</string>
+    <string name="export">Export</string>
+
+    <string name="profile">Profile</string>
+    <string name="comment">Comment</string>
+    <string name="google_search">Google Search</string>
+    <string name="translate">Translate</string>
+    <string name="save">save</string>
+    <string name="editing">Editing</string>
+    <string name="cancel">cancel</string>
+
+    <string name="all_contacts">All contacts</string>
+    <string name="samsung_cloud">Samsung Cloud</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="google_contacts">Google Contacts</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="telegram">Telegram</string>
+    <string name="skype">Skype</string>
+    <string name="viber">Viber</string>
+    <string name="call2me_cloud">Extime app</string>
+
+    <string name="people">People</string>
+    <string name="companies">Companies</string>
+    <string name="community">Community</string>
+    <string name="favorites">Favorites</string>
+    <string name="all_hashtags">hashtags</string>
+    <string name="set_time">Set time</string>
+
+    <string name="cancel_">CANCEL</string>
+    <string name="remind_">REMIND</string>
+    <string name="confirm_">CONFIRM</string>
+
+    <string name="delete">Delete</string>
+    <string name="merge">Merge</string>
+    <string name="back">Back</string>
+
+    <string name="ms_hint">" Magic string - start"</string>
+    <string name="load">" contacts loaded from"</string>
+    <string name="cont_sel">" Contacts selected"</string>
+
+    <string name="test_call2me">#extime</string>
+    <string name="test_hashtag">#hashtag</string>
+    <string name="test_happyman">#happyman</string>
+    <string name="test_cyprus">#cyprus</string>
+    <string name="test_tags">#timesoftware #another</string>
+    <string name="test_name">Bruce Glover</string>
+    <string name="test_position">Position</string>
+    <string name="test_time">21:00</string>
+    <string name="test_set_time">25.09 10:05 PM</string>
+    <string name="test_set_time_in">in 3 h</string>
+    <string name="test_10m">10 m</string>
+    <string name="test_discuss_the_project">Discuss the project</string>
+
+
+    <string name="drawer_name">Scott Masterson</string>
+    <string name="drawer_ht">#extime #hashtag #extime #extime</string>
+    <string name="drawer_social_profiles">Social Profiles</string>
+    <string name="drawer_messengers">Messengers</string>
+    <string name="drawer_services">Services</string>
+    <string name="drawer_widget">Widget</string>
+    <string name="drawer_help">Help</string>
+    <string name="drawer_rating">Rating</string>
+    <string name="drawer_invite_friends">Invite friends</string>
+    <string name="drawer_settings">Settings</string>
+    <string name="test_today">Today</string>
+    <string name="test_date_timeline">2nd of April 2017</string>
+    <string name="test_name_john">John Gold</string>
+    <string name="space">--</string>
+    <string name="test_email">putin@kremlin.ru</string>
+    <string name="autoreply">Autoreply</string>
+    <string name="on">ON</string>
+    <string name="courtesy">Courtesy</string>
+    <string name="questions">Questions</string>
+    <string name="actions">Actions</string>
+    <string name="all_types">All types</string>
+    <string name="technical_specification">Technical specification</string>
+    <string name="call2me_hashtag_happyman">*extime *hashtag *happyman</string>
+    <string name="all_startags">All startags</string>
+    <string name="call2meee">*extime</string>
+    <string name="hashtag">*hashtag</string>
+    <string name="happyman">*happyman</string>
+    <string name="cyprus">*cyprus</string>
+    <string name="all_clouds">All clouds</string>
+    <string name="google_drive">Google Drive</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="ms_onedrive">MS OneDrive</string>
+    <string name="mailru">Mail.ru</string>
+    <string name="pdf_files">Pdf files</string>
+    <string name="sheets">Sheets</string>
+    <string name="photos">Photos</string>
+    <string name="documents">Documents</string>
+    <string name="all_links">All links</string>
+    <string name="youtube">Youtube</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="websites">Websites</string>
+    <string name="drawer_log_in">Log In</string>
+    <string name="edit2">edit</string>
+    <string name="clipboard">Clipboard</string>
+    <string name="_1_exesting_3_fields_selected"><![CDATA[1 exesting & 3 fields selected]]></string>
+    <string name="merge1">MERGE</string>
+    <string name="update1">UPDATE</string>
+    <string name="create">CREATE</string>
+    <string name="_21_00">21:00</string>
+    <string name="www_facebook_com_call2me">www.facebook.com/extime</string>
+    <string name="mobile">Mobile</string>
+    <string name="all">All</string>
+    <string name="austin">Austin</string>
+    <string name="_3">(+3)</string>
+    <string name="file">File</string>
+    <string name="access">Access</string>
+    <string name="list">List</string>
+    <string name="map">Map</string>
+    <string name="all_places">All places</string>
+    <string name="want_to_go">Want to go</string>
+    <string name="starred_places">Starred places</string>
+    <string name="new_place">New</string>
+    <string name="limassol_cyprus">Limassol Cyprus</string>
+    <string name="_21_contacts">21 contacts</string>
+    <string name="pdf">PDF</string>
+    <string name="google_sheets">Google Sheets</string>
+    <string name="ms_excel">MS Excel</string>
+    <string name="phone">phone</string>
+    <string name="teext">Text</string>
+    <string name="contacts_tags">Contacts tags</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="vkontakte">Vkontakte</string>
+    <string name="twitter">Twitter</string>
+    <string name="medium">Medium</string>
+    <string name="save_changes">save</string>
+    <string name="community_string">Community</string>
+    <string name="company_string">Company</string>
+    <string name="enter_name">Name</string>
+    <string name="suggested_tags">Suggested tags</string>
+    <string name="assistant_suggest">Assistant suggest</string>
+    <string name="settings">Settings</string>
+    <string name="finished">Finished</string>
+    <string name="paused">Pause</string>
+    <string name="important">Important</string>
+    <string name="title_activity_main3">TransparentActivity</string>
+    <string name="search">Search</string>
+    <string name="privacy_safe"><![CDATA[Privacy <safe>]]></string>
+    <string name="crown">Crown</string>
+    <string name="title_activity_dial">DialActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="folders_labels"><![CDATA[Folders & labels]]></string>
+
+</resources>

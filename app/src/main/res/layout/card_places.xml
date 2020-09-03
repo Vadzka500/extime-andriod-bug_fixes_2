@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="64dp"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/place_image_block"
+        android:layout_width="72dp"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/placeCircleColor"
+            android:layout_width="40dp"
+
+            android:src="@drawable/blue_circle"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal|center_vertical"/>
+
+        <TextView
+            android:id="@+id/placeInitials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:maxLength="2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginBottom="1dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:text="F"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="left">
+
+
+            <TextView
+                android:id="@+id/placeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:gravity="left"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:text="John Gold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+                <TextView
+                    android:id="@+id/placeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="left"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal"
+                    android:textColor="@color/gray"
+                    android:text="Company"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/placeIcn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icn_sort_star"/>
+
+    </FrameLayout>
+
+</LinearLayout>

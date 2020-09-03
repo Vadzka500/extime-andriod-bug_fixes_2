@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/linearNameSearch"
+    android:background="@drawable/select_name_search"
+    android:paddingBottom="2.5dp"
+    android:paddingTop="2.5dp"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    <FrameLayout
+        android:id="@+id/contact_image_block"
+        android:layout_width="35dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactCircleColor"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@android:color/transparent" />
+
+
+        <TextView
+            android:id="@+id/contactInitials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="0dp"
+            android:ellipsize="end"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:text="F"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/nameContact"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Name Surname"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="13dp"/>
+
+            <LinearLayout
+                android:id="@+id/linearComp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/companySearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorPrimary"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="Company"/>
+
+
+                <TextView
+                    android:id="@+id/positionSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/gray"
+                    android:singleLine="true"
+                    android:minWidth="30dp"
+                    android:ellipsize="end"
+                    android:textSize="12dp"
+                    android:text="Position"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

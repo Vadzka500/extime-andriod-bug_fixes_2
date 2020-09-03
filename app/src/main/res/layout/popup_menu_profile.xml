@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/menu_profile_share"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/share_menu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icn_popup_share"
+            android:tint="@color/colorPrimary"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:id="@+id/share_menu_clicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Share"
+            android:textSize="14dp"
+            android:layout_weight="1"
+            android:textColor="#414141"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-normal"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/profile_menu_share_whatsapp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icn_social_whatsapp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/profile_menu_share_telegram"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icn_social_telegram"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/profile_menu_share_slack"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/slack" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_global_search"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:clickable="true">
+
+        <FrameLayout
+            android:id="@+id/frameCircleList"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp">
+
+            <ImageView
+                android:id="@+id/imageTypeClipboardGroupList"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical|start"
+                android:src="@drawable/circle"
+                android:tint="@color/gray"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/contactNumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginEnd="0dp"
+                android:text="?"
+                android:textColor="@color/gray"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-normal"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Global search"
+            android:textSize="14dp"
+            android:textColor="#414141"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_remind"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icn_popup_remind"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/gray"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Remind"
+            android:textSize="14dp"
+            android:textColor="#414141"
+            android:fontFamily="sans-serif-normal"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_copy"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/copy_menu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icn_profile_edit_copy"
+            android:tint="@color/colorPrimary"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Copy"
+            android:textSize="14dp"
+            android:textColor="#414141"
+            android:fontFamily="sans-serif-normal"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_edit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/pen_menu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icn_popup_pencil"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Edit"
+            android:textSize="14dp"
+            android:textColor="#414141"
+            android:fontFamily="sans-serif-normal"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_delete"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icn_profile_edit_trash"
+            android:tint="@color/gray"
+            android:layout_gravity="center_vertical"
+
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Delete"
+            android:textSize="14dp"
+            android:textColor="#414141"
+            android:fontFamily="sans-serif-normal"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/menu_profile_more"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/more"
+        android:tint="@color/colorPrimary"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="14dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_weight="1"
+        android:text="More"
+        android:textSize="14dp"
+        android:textColor="#414141"
+        android:fontFamily="sans-serif-normal"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:text="4"
+            android:layout_marginBottom="-3dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-normal"
+            android:textSize="10dp"/>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:src="@drawable/arr_down"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_less"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/more"
+            android:tint="@color/colorPrimary"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_weight="1"
+            android:text="More"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-normal"
+            android:textColor="#414141"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="6"
+                android:layout_marginBottom="-2dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="10dp"/>
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:src="@drawable/arr_up"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/exchange"
+            android:tint="@color/gray"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Change type"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-normal"
+            android:textColor="#414141"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_open"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/openInMobileMenu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icn_phone"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Open in mobile"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-normal"
+            android:textColor="#414141"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_salesforce"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/salesforce"
+            android:tint="@color/gray"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Add to Salesforce"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-normal"
+            android:textColor="#414141"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_profile_add_more"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/selectable_item_background"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/services"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/gray"
+            android:layout_marginStart="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Add more services"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-normal"
+            android:textColor="#414141"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

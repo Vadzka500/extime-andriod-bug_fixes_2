@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/popup_background"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.45"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assistant suggest"
+            android:textColor="@color/gray"
+            android:textSize="15dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/container_assistans_tags"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="10dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="Most used tags"
+            android:textSize="14dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/container_mostused_tags"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

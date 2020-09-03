@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="22dp"
+    android:background="#80ffffff"
+    android:id="@+id/custom_marker">
+    
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_margin="4dp"
+        android:src="@drawable/icn_places_heart"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_margin="4dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="#87aade"
+        android:text="some marker" />
+
+</LinearLayout>

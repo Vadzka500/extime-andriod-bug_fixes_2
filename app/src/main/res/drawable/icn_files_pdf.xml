@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="36dp"
+    android:height="41dp"
+    android:viewportWidth="36"
+    android:viewportHeight="41">
+
+    <path
+        android:fillColor="#E2E5E7"
+        android:pathData="M7.714 0a2.575 2.575 0 0 0-2.571 2.563v35.874A2.575 2.575 0 0 0 7.714
+41H33.43A2.575 2.575 0 0 0 36 38.437V10.25L25.714 0h-18z" />
+    <path
+        android:fillColor="#B0B7BD"
+        android:pathData="M28.286 10.25H36L25.714 0v7.688a2.575 2.575 0 0 0 2.572 2.562z" />
+    <path
+        android:fillColor="#CAD1D8"
+        android:pathData="M36 17.938l-7.714-7.688H36z" />
+    <path
+        android:fillColor="#F15642"
+        android:pathData="M30.857 33.313c0 .704-.578 1.28-1.286 1.28H1.286A1.287 1.287 0 0 1 0
+33.314V20.5c0-.705 .579 -1.281 1.286-1.281H29.57c.708 0 1.286 .576 1.286
+1.281v12.813z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#FFF"
+        android:pathData="M5.604 24.276c0-.338 .268 -.707 .699 -.707h2.374c1.337 0 2.54 .891 2.54 2.6 0
+1.62-1.203 2.522-2.54 2.522H6.961v1.353c0 .451-.288 .706 -.658 .706 a.692 .692 0
+0 1-.699-.706v-5.768zm1.357 .583 v2.552h1.716c.69 0 1.235-.606 1.235-1.241
+0-.717-.546-1.311-1.235-1.311H6.961zM13.231 30.75c-.34
+0-.71-.184-.71-.634v-5.82c0-.367 .37 -.635 .71 -.635h2.354c4.698 0 4.596 7.089
+.093 7.089h-2.447zm.648-5.839v4.59h1.706c2.776 0 2.9-4.59 0-4.59H13.88zM21.847
+24.993v1.629h2.621c.37 0 .741 .369 .741 .726 0 .339-.37 .615 -.74 .615
+h-2.622v2.152c0 .358-.256 .634 -.616 .634 -.453
+0-.729-.276-.729-.634v-5.82c0-.368 .278 -.635 .729 -.635h3.609c.453 0 .72 .267
+.72 .635 a.71 .71 0 0 1-.72 .697 h-2.993v.001z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#CAD1D8"
+        android:pathData="M29.571 34.594H5.143v1.281H29.57c.708 0 1.286-.577 1.286-1.281v-1.282c0
+.705-.578 1.282-1.286 1.282z"
+        tools:ignore="InvalidVectorPath" />
+</vector>

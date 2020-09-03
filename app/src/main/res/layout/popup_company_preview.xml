@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_background">
+
+    <LinearLayout
+        android:id="@+id/profile_preview_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="11dp"
+            android:paddingRight="10dp">
+
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp">
+
+                <ImageView
+                    android:id="@+id/companyPopupAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/profilePopupInitials"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:text="F"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/data_block"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:scrollbars="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="-2dp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="sans-serif"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="1"
+                        android:paddingEnd="2dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/test_name"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="14.5dp"
+                        android:textStyle="normal"
+                        tools:ignore="EllipsizeMaxLines" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="sans-serif-light"
+                        android:text="21:00"
+                        android:textColor="@color/gray"
+                        android:textSize="12dp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/emailImg"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icn_bottombar_emails"
+                        android:tint="@color/gray"
+                        android:visibility="gone" />
+
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="-1dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/webImgCompany"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icn_popup_web"
+                        android:visibility="visible" />
+
+
+                    <TextView
+                        android:id="@+id/web_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toRightOf="@+id/webImgCompany"
+
+                        android:clickable="true"
+                        android:ellipsize="end"
+
+                        android:fontFamily="sans-serif-light"
+                        android:singleLine="true"
+
+                        android:text="@string/limassol_cyprus"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="14dp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+
+                    <ImageView
+                        android:id="@+id/webImg"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icn_popup_web"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.3dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="230dp"
+                        android:layout_height="18dp"
+                        android:ellipsize="end"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:id="@+id/scrollHorizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:id="@+id/containerHashTags"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="Orientation">
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lineaSocials"
+                android:layout_width="wrap_content"
+                android:layout_height="21.5dp"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+
+
+                <ImageView
+                    android:id="@+id/vk_icon"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icn_social_vk"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:id="@+id/link_icon"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icn_social_linkedin"
+                    tools:ignore="DuplicateIds" />
+
+
+                <FrameLayout
+
+                    android:layout_width="27.8dp"
+                    android:layout_height="27.8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="-3.2dp">
+
+                    <ImageView
+                        android:id="@+id/inst_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="3dp"
+                        android:src="@drawable/icn_social_instagram"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/frame" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/popup_company_open_socialPopup"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="125dp"
+                android:paddingTop="10dp"
+                android:layout_gravity="bottom|start">
+
+                <ImageView
+                    android:id="@+id/socialsArrowDown"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+
+                    android:layout_marginTop="-1dp"
+                    android:src="@drawable/icn_arrow_down"
+
+                    android:tint="@color/colorPrimary" />
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.05" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="21.5dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="4dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/first_contact_company_preview_frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/first_contact_company_preview"
+                            android:layout_width="21.5dp"
+                            android:layout_height="21.5dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp" />
+
+                        <TextView
+                            android:id="@+id/first_contact_company_preview_text_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginLeft="4dp"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:text="F"
+                            android:textColor="@color/white"
+                            android:textSize="6dp" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/second_contact_company_preview_frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/second_contact_company_preview"
+                            android:layout_width="21.5dp"
+                            android:layout_height="21.5dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp" />
+
+                        <TextView
+                            android:id="@+id/second_contact_company_preview_text_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginLeft="4dp"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:text="F"
+                            android:textColor="@color/white"
+                            android:textSize="6dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/third_contact_company_preview_frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/third_contact_company_preview"
+                            android:layout_width="21.5dp"
+                            android:layout_height="21.5dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp" />
+
+                        <TextView
+                            android:id="@+id/third_contact_company_preview_text_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginLeft="4dp"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:text="F"
+                            android:textColor="@color/white"
+                            android:textSize="6dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/four_contact_company_preview_frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/four_contact_company_preview"
+                            android:layout_width="21.5dp"
+                            android:layout_height="21.5dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"/>
+
+                        <TextView
+                            android:id="@+id/four_contact_company_preview_text_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginLeft="4dp"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:text="F"
+                            android:textColor="@color/white"
+                            android:textSize="6dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/contactsArrowDown"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:adjustViewBounds="true"
+                    android:orientation="vertical"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        android:id="@+id/companyNumb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="-2dp"
+                        android:fontFamily="sans-serif-normal"
+                        android:text="44"
+                        android:textColor="@color/orange"
+                        android:textSize="8dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="-1dp"
+                        android:src="@drawable/icn_arrow_down"
+                        android:tint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="21.5dp"
+            android:layout_marginTop="13.2dp"
+            android:orientation="horizontal"
+            android:paddingLeft="11dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/facebook_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icn_social_facebook" />
+
+            <ImageView
+                android:id="@+id/vk_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icn_social_vk"
+                tools:ignore="DuplicateIds" />
+
+            <ImageView
+                android:id="@+id/link_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icn_social_linkedin"
+                tools:ignore="DuplicateIds" />
+
+
+            <FrameLayout
+
+                android:layout_width="27.8dp"
+                android:layout_height="27.8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="-3.2dp">
+
+                <ImageView
+                    android:id="@+id/inst_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"
+                    android:src="@drawable/icn_social_instagram"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/frame" />
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/viber_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/whatsapp_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/telegram_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/skype_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="1dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icn_arrow_down"
+                android:tint="@color/colorPrimary"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="11.5dp"
+            android:background="@color/sortPopupLine" />
+
+        <LinearLayout
+            android:id="@+id/buttons_company_preview"
+            android:layout_width="match_parent"
+            android:layout_height="44.5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp"
+            android:paddingTop="5dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="5dp">
+
+            <FrameLayout
+                android:id="@+id/company_profile_block"
+                android:layout_width="53dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icn_companies"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/companyTextPreviev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/profile"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/user_edit_block"
+                android:layout_width="53dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    android:paddingRight="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icn_popup_pencil"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/EditCompanyPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/edit"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/user_call_block"
+                android:layout_width="53dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:paddingBottom="1dp"
+                        android:src="@drawable/icn_popup_call"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/CompanyCallPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/call"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/user_remind_block"
+                android:layout_width="53dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icn_popup_remind"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/remindCompanyPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/remind"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/user_share_block"
+                android:layout_width="53dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icn_popup_share"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/shareCompanyPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/share"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/arrowShowHashtags"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical|end|top"
+        android:layout_marginTop="53dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icn_arrow_down"
+            android:tint="@color/colorPrimary" />
+
+    </FrameLayout>
+
+
+</FrameLayout>

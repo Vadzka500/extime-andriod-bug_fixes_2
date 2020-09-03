@@ -1,0 +1,383 @@
+<!--suppress AndroidDomInspection -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupInfoClipboard"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+
+
+
+    android:background="@drawable/popup_background"
+
+
+    android:orientation="vertical"
+    android:paddingStart="13.5dp"
+    android:paddingTop="0dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="12dp"
+    android:visibility="visible">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:layout_marginEnd="0dp">
+
+        <FrameLayout
+            android:layout_width="22dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_slack"/>
+
+        <FrameLayout
+            android:id="@+id/frame_send_messageInfo_clipboard_parse"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2.5dp"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iconDataProfile"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_ms_clipboard"
+                />
+
+            <TextView
+                android:id="@+id/typeField"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingTop="6dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="68dp"
+                android:fontFamily="sans-serif-normal"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:textColor="@color/gray_textView"
+                android:singleLine="true"
+                android:ellipsize="end"
+
+
+                android:layout_marginStart="8dp"
+                android:text="Read link..."/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/updateContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="37.5dp"
+
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleX="0.72"
+                android:scaleY="0.72"
+
+                android:src="@drawable/icn_popup_pencil" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/editPopupCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleX="0.72"
+                android:scaleY="0.72"
+                android:src="@drawable/icn_profile_edit_copy"
+                android:tint="@color/primary" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/timeClipboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:textColor="@color/gray"
+            android:text="12:12:12 Jan 1 1987"
+            android:textSize="9dp"
+            android:visibility="invisible"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/sernInformClipboardParseData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/primary"
+            android:layout_marginStart="2dp"
+            android:text="Please inform us - just tap here"
+            android:textSize="11dp"
+            android:visibility="gone"
+            android:layout_marginTop="6dp"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="2dp"
+        android:background="@color/sortPopupLine" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/valueUpd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:gravity="center_vertical"
+
+
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+
+            android:fontFamily="sans-serif-normal"
+            android:textSize="16dp"
+            android:textStyle="normal"
+            android:maxHeight="40dp"
+            android:minHeight="20dp"
+            android:scrollbars="none"
+            android:text="+7(999) 000-11-77"
+            android:textColor="@color/primary_dark"
+
+
+            android:textIsSelectable="true"
+
+            android:textColorHighlight="@color/colorPrimary"
+
+
+            />
+
+
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="2dp"
+        android:background="@color/sortPopupLine" />
+
+    <LinearLayout
+        android:id="@+id/frame_info_touch"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="4dp">
+
+        <FrameLayout
+            android:id="@+id/delete_contact_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:bottomLeftRadius="15dp"
+                android:bottomRightRadius="15dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/icn_profile_edit_trash"
+                android:tint="@color/colorPrimary"
+                android:topLeftRadius="15dp"
+                android:topRightRadius="15dp" />
+
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/editPopupMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:id="@+id/icn_mail_clip"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/icn_remind_message"
+                android:tint="@color/colorPrimary" />
+
+        </FrameLayout>
+
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/editPopupCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:id="@+id/imageCall"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:bottomLeftRadius="15dp"
+                android:bottomRightRadius="15dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/icn_popup_call"
+
+                android:topLeftRadius="15dp"
+                android:topRightRadius="15dp" />
+
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/remind_contact_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/icn_popup_remind"
+                android:tint="@color/colorPrimary" />
+
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/call2me_contact_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_gravity="center_vertical"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:visibility="visible"
+                android:src="@drawable/new_icon" />
+
+            <FrameLayout
+                android:id="@+id/search_note_popup"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/circle_search_popup"
+                    android:layout_width="21dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/circle_search"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/number_search_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="?"
+                    android:layout_marginEnd="0dp"
+                    android:textColor="@color/orange"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/editPopupShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_circle_ripple">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/icn_popup_share"
+                android:tint="@color/colorPrimary" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

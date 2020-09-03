@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/toolbar_template_edit"
+        layout="@layout/toolbar_layout_template_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar">
+
+
+        <FrameLayout
+            android:id="@+id/forClose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main_content_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/topBarBlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_popup_backgroung"
+                    android:orientation="vertical">
+
+                    <ViewFlipper
+                        android:id="@+id/barFlipper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            android:id="@+id/sortBar"
+                            layout="@layout/bar_contacts"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp" />
+
+                        <include
+                            android:id="@+id/timeBar"
+                            layout="@layout/bar_timeline"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/top_popup_backgroung" />
+
+
+
+                        <include
+                            layout="@layout/bar_files"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/top_popup_backgroung" />
+
+                        <include
+                            layout="@layout/bar_places"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/top_popup_backgroung" />
+
+                        <include
+                            layout="@layout/bar_emails"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:background="@drawable/top_popup_backgroung" />
+
+                    </ViewFlipper>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:max="100"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/loadBar"
+                        layout="@layout/contact_load_runtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/frame_select_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone">
+
+                        <include
+                            android:id="@+id/select_bar"
+                            layout="@layout/select_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                android:layout_weight="1">
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/frame_select_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <include
+                    android:id="@+id/select_menu"
+                    layout="@layout/select_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="1dp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/framePopupSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:visibility="gone">
+
+                <include layout="@layout/extract_data" />
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="-10dp"
+                android:background="@drawable/magic_string_bg">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <include
+                        layout="@layout/magic_string"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        android:id="@+id/bottom_bar_to_close"
+                        layout="@layout/bottom_navigation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/countSearchContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="6dp"
+            android:text="39 matched entries"
+            android:textSize="9sp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fab"
+            layout="@layout/fab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="1dp"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/fastEditPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+
+            android:visibility="gone"
+
+            android:windowSoftInputMode="adjustPan">
+
+            <include layout="@layout/popup_profile_fastedit" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/profile_popup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/profile_popup_for_margin"
+                layout="@layout/popup_profile_preview" />
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/company_popup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/company_popup_for_margin"
+                layout="@layout/popup_company_preview" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/remindPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_remind" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/companyAddPopup"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_user_companies" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/companyAddPopupEdit"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="52dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_companies_edit" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/positionAddPopup"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_user_position" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/statusPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_status" />
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/hashtag_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="115dp"
+            android:layout_marginBottom="116dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="10">
+
+                    <include layout="@layout/popup_contacts_hashtags" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/favoriteContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="338dp"
+
+            android:layout_marginLeft="82dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="116dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_contacts_favorites" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popup_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="116dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_contacts_all" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupTimelineTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_timeline_types" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupFilesTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_files_types" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupFilesClouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_files_clouds" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupFilesLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_files_links" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupFilesHash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="165dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_files_startags" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_profile_edit" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_profile_preview_social" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/popup_places"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_places" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popup_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="end"
+            android:layout_marginTop="0dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_export" />
+        </FrameLayout>
+
+
+
+
+
+
+
+        <FrameLayout
+            android:id="@+id/popupSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_profile_social" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupContactsCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_contacts_company" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/popupProfileHashtags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_user_hashtags" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/popupProfileCompanyPossitions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="50dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_company_possition" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupProfileHashtags123"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_user_hashtags" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/profile_popup_kankab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/profile_popup_for_margin_kankab"
+                layout="@layout/popup_kankab_preview" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupEditMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_profile_edit" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/popupPreviewEditSocial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_profile_edit_preview" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/popupEditSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_profile_edit" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/clipboardContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone">
+
+                    <include layout="@layout/popup_clipboard" />
+
+
+                    <View
+                        android:id="@+id/kb_close"
+                        android:layout_width="match_parent"
+                        android:layout_height="118dp"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/kb_open"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/historyContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone">
+
+                    <include layout="@layout/popup_history" />
+
+
+                    <View
+                        android:id="@+id/kb_close_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="118dp"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/kb_open_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/completeTagsPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="118dp"
+                    android:background="@drawable/magic_string_bg"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/autocomplete" />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/extratorContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include layout="@layout/extrator_popup" />
+
+
+                <View
+                    android:id="@+id/kb_close2"
+                    android:layout_width="match_parent"
+                    android:layout_height="164dp"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/kb_open2"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/accountContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginEnd="-4dp"
+                    android:layout_marginStart="-4dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/popup_accounts" />
+
+
+                    <View
+                        android:id="@+id/kb_account_close"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/kb_account_open"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/popupGlobalSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/popup_background"
+
+            android:visibility="gone">
+
+            <include layout="@layout/popup_global" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/suggestPopup"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="257dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_suggested_tags" />
+        </FrameLayout>
+
+
+
+
+        <FrameLayout
+            android:id="@+id/popup_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="227dp"
+            android:layout_marginRight="58dp"
+            android:visibility="gone">
+
+            <include layout="@layout/popup_contacts_create" />
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/popupTemplate"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-4dp"
+        android:visibility="gone">
+
+        <include layout="@layout/popup_tamplate" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/popupTemplateEdit"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-4dp"
+        android:visibility="gone">
+
+        <include layout="@layout/popup_template_edit" />
+
+
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/popup_menu_profile"
+        android:layout_width="200dp"
+        android:layout_height="294dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:visibility="gone">
+
+
+        <include layout="@layout/popup_menu_profile" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/popup_menu_contacts"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:visibility="gone">
+
+
+        <include layout="@layout/popup_menu_contacts" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/popup_menu_timeline"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:visibility="gone">
+
+
+        <include layout="@layout/popup_menu_timeline" />
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/popup_menu_settings"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:visibility="gone">
+
+
+        <include layout="@layout/popup_menu_settings" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <FrameLayout
+        android:id="@+id/share_template_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+    <include layout="@layout/popup_message_share_template" />
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

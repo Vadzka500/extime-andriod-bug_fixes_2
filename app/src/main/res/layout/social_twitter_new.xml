@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/socialTw">
+
+    <ImageView
+        android:id="@+id/twitter_icon"
+        android:layout_width="21.5dp"
+        android:layout_height="21.5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_twitter_white" />
+
+</FrameLayout>

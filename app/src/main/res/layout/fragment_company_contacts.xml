@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="9dp">
+
+    <FrameLayout
+        android:id="@+id/companyCloser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/count_contact_company_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-normal"
+            android:text="59 contacts"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:textSize="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/sortElementsCompany"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/sortText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp"
+                    android:layout_marginTop="0.7dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="A-Z"/>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
+
+            <FrameLayout
+                android:id="@+id/sortByPopular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/populTag"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/icn_sort_pulse" />
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="4dp"
+                android:layout_height="0dp"/>
+
+            <FrameLayout
+                android:id="@+id/sortByTimeCompany"
+                android:layout_width="29dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/timeSort"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/icn_sort_clock"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="22dp">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:paddingBottom="10dp" />
+
+
+
+    </FrameLayout>
+
+
+</FrameLayout>

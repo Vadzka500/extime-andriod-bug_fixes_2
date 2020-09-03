@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="36dp"
+    android:height="41dp"
+    android:viewportWidth="16"
+    android:viewportHeight="18">
+
+    <path
+        android:fillColor="#E2E5E7"
+        android:pathData="M3.429 0C2.8 0 2.286 .506 2.286 1.125v15.75c0 .619 .514 1.125 1.143
+1.125h11.428c.629 0 1.143-.506 1.143-1.125V4.5L11.429 0h-8z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#B0B7BD"
+        android:pathData="M12.571 4.5H16L11.429 0v3.375c0 .619 .514 1.125 1.142 1.125z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#CAD1D8"
+        android:pathData="M16 7.875L12.571 4.5H16z" />
+    <path
+        android:fillColor="#84BD5A"
+        android:pathData="M13.714 14.625c0 .31-.257 .563 -.571 .563 H.57A.569 .569 0 0 1 0 14.624V9c0-.31
+.257 -.563 .571 -.563h12.572c.314 0 .571 .254 .571 .563 v5.625z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#FFF"
+        android:pathData="M4.012 11.468l.795-.98c.238-.307 .7 .084 .439 .377-.274 .32 -.562 .666 -.836
+1.02l.932 1.143c.251 .338 -.251 .661 -.498 .328 l-.841-1.061-.827 1.084c-.233
+.328 -.75-.04-.49-.346l.92-1.147c-.289-.356-.568-.702-.846-1.021-.287-.338 .247
+-.684 .457 -.368l.795 .97 zM5.906 10.658c0-.149 .128 -.275 .288 -.275 .146 0 .27
+.127 .27 .275 v2.253h1.242c.448 0 .457 .589 0 .589H6.194c-.16
+0-.288-.112-.288-.274v-2.568zM8.573 11.063c.105-.873 1.443-1.03 2.074-.553 .31
+.247-.018 .638 -.293 .44 -.338-.21-1.105-.31-1.201 .157 -.124 .738 1.864 .316
+1.832 1.512-.032 1.143-1.714 1.169-2.344 .657 a.329 .329 0 0
+1-.064-.441c.118-.117 .25 -.157 .406 -.031 .375 .251 1.34 .44
+1.407-.199-.059-.665-1.96-.265-1.817-1.542z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#CAD1D8"
+        android:pathData="M13.143 15.188H2.286v.562h10.857a.569 .569 0 0 0 .571-.563v-.562c0 .31-.257 .563
+-.571 .563 z"
+        tools:ignore="InvalidVectorPath" />
+</vector>

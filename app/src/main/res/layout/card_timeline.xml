@@ -1,0 +1,250 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:background="@color/sortbarcolor"
+        android:id="@+id/timelineDateBar"
+        android:layout_width="match_parent"
+        android:layout_height="16dp">
+
+        <TextView
+            android:id="@+id/dayTimeline"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="10dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/test_today"/>
+
+
+        <TextView
+            android:id="@+id/dateTimeline"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textColor="@color/colorPrimaryDark"
+            android:lineSpacingExtra="-2sp"
+            android:gravity="center_horizontal"
+            android:text="@string/test_date_timeline"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/contact_image_block"
+            android:layout_width="72dp"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contactCircleColor"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/contactInitials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:maxLength="2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginBottom="1dp"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:text="F"/>
+            
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/icn_social_skype"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_gravity="left">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp">
+
+                    <TextView
+                        android:id="@+id/contactName"
+                        android:paddingTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="@string/test_name_john"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="normal" />
+                    
+                    <ImageView
+                        android:id="@+id/arrowTimeline"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/icn_timeline_arrow_back"/>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bottomValueTimeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:gravity="left"
+                    android:paddingTop="3dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal"
+                    android:textColor="@color/gray"
+                    android:text="@string/test_email"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="16dp"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:id="@+id/emailTimeline"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/icn_emails"/>
+
+                    <ImageView
+                        android:id="@+id/geoTimeline"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/icn_geo"/>
+
+                    <ImageView
+                        android:id="@+id/remindTimeline"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/icn_popup_remind"/>
+
+                    <ImageView
+                        android:id="@+id/facebookTimeline"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/icn_social_facebook"/>
+
+                    <ImageView
+                        android:id="@+id/pdfTimeline"
+                        android:layout_marginEnd="2dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/icn_files_pdf"/>
+
+                    <TextView
+                        android:id="@+id/countTimeline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="normal"
+                        android:gravity="right"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:textColor="@color/gray"
+                        android:text="(3)"/>
+
+                    <TextView
+                        android:id="@+id/cardTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:textSize="12dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="normal"
+                        android:gravity="right"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:textColor="@color/gray"
+                        android:text="21:00"/>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/typeTimeline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="normal"
+                        android:gravity="end"
+                        android:layout_gravity="top|center_horizontal"
+                        android:textColor="@color/contactNewGreen"
+                        android:text="new email"/>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/popup_contacts_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/createCommunity"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_community" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/community_string"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="40dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/createCompany"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_companies" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/company_string"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/createContact"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_contacts_all_favorites" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="Contact"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

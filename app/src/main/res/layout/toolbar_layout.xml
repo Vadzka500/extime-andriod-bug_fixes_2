@@ -1,0 +1,116 @@
+<android.support.v7.widget.Toolbar android:id="@+id/main_toolbar1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:title=""
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/cancel_toolbar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="start"
+        android:layout_gravity="start"
+        android:layout_marginEnd="15dp"
+        android:text="CANCEL"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/linear_toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts"
+        android:textSize="20dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+
+        android:maxEms="8"
+        android:id="@+id/toolbar_title" />
+
+        <ImageView
+            android:id="@+id/more_templates_toolbar"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/arr_down"
+            android:tint="@color/white"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="5dp"
+
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/toolbar_menu"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_action_name_2"
+        android:layout_marginEnd="14dp"
+        android:visibility="gone"
+        android:layout_gravity="end"/>
+
+    <ImageView
+        android:id="@+id/toolbar_share"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_action_share"
+        android:layout_marginEnd="14dp"
+        android:visibility="gone"
+        android:layout_gravity="end"/>
+
+    <FrameLayout
+        android:id="@+id/toolbar_kanban_clicker"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="end">
+
+    <ImageView
+        android:id="@+id/toolbar_kanban"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_k_2"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@color/primary"
+        android:visibility="visible"
+        />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/toolbar_plane"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/icn_ms_plane"
+        android:tint="@color/white"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        android:layout_gravity="end"/>
+
+
+    <ImageView
+        android:id="@+id/toolbar_edit"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@drawable/pen_white"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:layout_gravity="end"/>
+
+
+
+</android.support.v7.widget.Toolbar>

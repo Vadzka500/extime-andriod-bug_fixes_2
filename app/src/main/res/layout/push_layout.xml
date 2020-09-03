@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+
+    <FrameLayout
+        android:id="@+id/block_1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+
+            <ImageView
+                android:layout_width="37dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@android:color/transparent"
+                android:paddingRight="3dp"
+                android:layout_marginTop="2dp"
+                android:tint="@color/primary"
+                android:scaleX="0.95"
+                android:scaleY="0.95"
+                android:src="@drawable/clipboard_get_last" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:layout_marginTop="2dp"
+                android:text="Clipboard"
+                android:paddingEnd="0dp"
+                android:textSize="8dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/countClipsUnread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/orange"
+            android:textSize="10dp"
+            android:layout_gravity="end"
+            android:textStyle="bold"
+            android:layout_marginEnd="2dp"/>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/block_3"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="5.2dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingRight="-2dp"
+                android:src="@drawable/icn_sort_clock" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5.5dp"
+                android:text="Timeline"
+                android:paddingRight="0dp"
+                android:textSize="8dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/block_2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="0dp"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icn_contacts_all_favorites" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="Contacts"
+                android:textSize="8dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/block_4"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginRight="1dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingRight="1dp"
+                android:tint="@color/primary"
+                android:src="@drawable/icn_bottombar_schedule" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:layout_marginTop="6dp"
+                android:text="Schedule"
+                android:textSize="8dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/block_5"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:id="@+id/filesNotification"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingRight="0dp"
+                android:src="@drawable/icn_files_file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:gravity="center|top"
+                android:text="Files"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/push_girl"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/new_icon" />
+
+        <ImageView
+            android:id="@+id/statusNotification"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="38dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/icn_status_online_active"/>
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

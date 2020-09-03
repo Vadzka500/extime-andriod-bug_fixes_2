@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_above="@+id/lin_p">
+
+        <LinearLayout
+            android:id="@+id/linear_no_photo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:src="@drawable/no_photo_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="No photo"
+                android:textColor="@color/primary"
+                android:textSize="22dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_no_photo_little"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/no_photo_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="No photo"
+                android:textColor="@color/primary"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/avatarContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:src="@drawable/no_photo" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="6dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="8.5dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/primary"
+            android:fontFamily="sans-serif-normal"
+            android:layout_marginTop="5dp"
+            android:text="Current avatar from contact, you can choose photo from another channel, just tap it"/>
+
+        <LinearLayout
+            android:id="@+id/frameSocialsAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+
+            android:orientation="horizontal">
+
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/scroll"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:scrollbars="vertical"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/facebook_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/facebook_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/facebook"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/facebook_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/twitter_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/twitter_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/twitter"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/twitter_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/linkedin_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/linkedin_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/linkedin"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/linkedin_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/instagram_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/instagram_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/instagram"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/instagram_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/youtube_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/youtube_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/youtube"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/youtube_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/vk_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/vk_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/vkontakte"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/vk_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/medium_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/medium_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/medium"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/medium_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="5dp"
+
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/whatsapp_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/whatsapp_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/whatsapp"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/whatsapp_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add usernamefj"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/skype_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/skype_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/skype"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/skype_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/mobile_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mobile_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Mobile"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/mobile_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/gmail_avatar_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/gmail_avatar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/no_photo_primary" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Gmail"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-0.5dp"
+                        android:id="@+id/gmail_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

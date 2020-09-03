@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="54dp">
+
+    <ImageView
+        android:id="@+id/type_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/icn_phone" />
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:minHeight="46dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hashtag_text"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="home"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/acceptData"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/tick"
+                android:visibility="gone"
+                android:layout_marginTop="-1dp"
+                android:tint="@color/primary"/>
+
+
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scrolvalue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:scrollbars="none"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/value1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:scrollHorizontally="true"
+                android:text="8(921)649-64-90"
+
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/selectCheck"
+        style="@style/CheckBoxStyleSmall"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="20dp"
+        android:checked="false" />
+
+    <RadioButton
+        android:id="@+id/selectRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="15dp"
+        android:checked="false" />
+
+
+
+</LinearLayout>

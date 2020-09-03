@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="36dp"
+    android:height="41dp"
+    android:viewportWidth="36"
+    android:viewportHeight="41">
+
+    <path
+        android:fillColor="#E2E5E7"
+        android:pathData="M7.714 0a2.575 2.575 0 0 0-2.571 2.563v35.874A2.575 2.575 0 0 0 7.714
+41H33.43A2.575 2.575 0 0 0 36 38.437V10.25L25.714 0h-18z" />
+    <path
+        android:fillColor="#B0B7BD"
+        android:pathData="M28.286 10.25H36L25.714 0v7.688a2.575 2.575 0 0 0 2.572 2.562z" />
+    <path
+        android:fillColor="#CAD1D8"
+        android:pathData="M36 17.938l-7.714-7.688H36z" />
+    <path
+        android:fillColor="#50BEE8"
+        android:pathData="M30.857 33.313c0 .704-.578 1.28-1.286 1.28H1.286A1.287 1.287 0 0 1 0
+33.314V20.5c0-.705 .579 -1.281 1.286-1.281H29.57c.708 0 1.286 .576 1.286
+1.281v12.813z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#FFF"
+        android:pathData="M4.868 30.75c-.34 0-.71-.186-.71-.636v-5.818c0-.369 .37 -.635 .71
+-.635h2.354c4.698 0 4.594 7.089 .091 7.089H4.868zm.648-5.84v4.59h1.706c2.776 0
+2.898-4.59 0-4.59H5.516zM15.75 30.852c-1.902 .082 -3.876-1.178-3.876-3.688
+0-2.52 1.973-3.76 3.876-3.76 1.799 .092 3.68 1.332 3.68 3.76 0 2.429-1.881
+3.688-3.68 3.688zm-.113-6.115c-1.152 0-2.406 .81 -2.406 2.428 0 1.61 1.255 2.43
+2.406 2.43 1.183 0 2.447-.82 2.447-2.43 0-1.62-1.264-2.428-2.447-2.428zM20.64
+27.154c0-1.977 1.244-3.678 3.609-3.678 .894 0 1.604 .267 2.354 .913 a.696 .696 0
+0 1 .03 .993 .7 .7 0 0 1-.946-.031c-.42-.44-.852-.563-1.438-.563-1.583 0-2.343
+1.118-2.343 2.367 0 1.27 .75 2.438 2.343 2.438 .586 0 1.131-.237 1.604-.656 .318
+-.246 .76 -.124 .945 .123 .165 .226 .246 .605-.113 .962 -.72 .668 -1.583 .801
+-2.438 .801 -2.486 0-3.607-1.693-3.607-3.67z"
+        tools:ignore="InvalidVectorPath" />
+    <path
+        android:fillColor="#CAD1D8"
+        android:pathData="M29.571 34.594H5.143v1.281H29.57c.708 0 1.286-.577 1.286-1.281v-1.282c0
+.705-.578 1.282-1.286 1.282z"
+        tools:ignore="InvalidVectorPath" />
+</vector>

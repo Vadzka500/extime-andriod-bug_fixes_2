@@ -1,0 +1,583 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
+        android:id="@+id/containerContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fastScrollPopupBackgroundSize="60dp"
+        app:fastScrollPopupBgColor="@color/colorPrimary"
+        app:fastScrollPopupTextColor="@android:color/primary_text_dark"
+        app:fastScrollPopupTextSize="35dp"
+        app:fastScrollThumbColor="@color/colorPrimaryDark"
+        app:fastScrollTrackColor="@color/white" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/scrollRec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/recyclerKankab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_1"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/star" />
+
+                        <TextView
+                            android:id="@+id/textType_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Favorites"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/icn_important" />
+
+                        <TextView
+                            android:id="@+id/textType_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Important"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_3"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/pause" />
+
+                        <TextView
+                            android:id="@+id/textType_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Pause"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_4"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/icn_finished" />
+
+                        <TextView
+                            android:id="@+id/textType_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Finished"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_5"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/crown" />
+
+                        <TextView
+                            android:id="@+id/textType_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Crown"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_6"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/vip_new" />
+
+                        <TextView
+                            android:id="@+id/textType_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Vip"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_7"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/investor_" />
+
+                        <TextView
+                            android:id="@+id/textType_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Investor"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head_card_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/popup_background_card"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageType_8"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/startup" />
+
+                        <TextView
+                            android:id="@+id/textType_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Startup"
+                            android:textColor="#414141"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countType_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="11dp"
+                        android:text="120"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/kanban_list_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/kanbanTabs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/result_tabs_kanban"
+
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:textStyle="normal"
+            app:stl_clickable="true"
+            app:stl_defaultTabBackground="?attr/selectableItemBackground"
+            app:stl_defaultTabTextAllCaps="false"
+            app:stl_defaultTabTextColor="@color/primary"
+            android:layout_marginTop="10dp"
+
+
+
+            app:stl_defaultTabTextMinWidth="0dp"
+            app:stl_defaultTabTextSize="12.8dp"
+            app:stl_distributeEvenly="false"
+            app:stl_dividerColor="#4D000000"
+            app:stl_dividerThickness="0dp"
+            app:stl_drawDecorationAfterTab="false"
+            app:stl_indicatorAlwaysInCenter="false"
+            app:stl_indicatorColor="@color/primary"
+            app:stl_indicatorCornerRadius="0dp"
+            app:stl_indicatorGravity="bottom"
+            app:stl_indicatorInFront="false"
+            app:stl_indicatorInterpolation="smart"
+            app:stl_indicatorThickness="2dp"
+
+            app:stl_indicatorWithoutPadding="false"
+            app:stl_overlineColor="#4D000000"
+            app:stl_overlineThickness="0dp"
+            app:stl_titleOffset="2dp"
+            app:stl_underlineColor="#4D000000"
+            app:stl_underlineThickness="0dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_kanban"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <include layout="@layout/popup_menu_message" />
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/closer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+</LinearLayout>

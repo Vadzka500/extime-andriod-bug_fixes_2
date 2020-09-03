@@ -1,0 +1,338 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_background"
+    android:paddingEnd="10dp"
+    android:paddingStart="16dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/popup_contacts_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contacts_tags"
+
+                        android:textSize="12dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:src="@color/timelineGreen"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="115dp"
+                        android:text="Custom tags"
+                        android:textSize="12dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:src="@color/colorPrimary"/>
+
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+
+                    <ImageView
+                        android:id="@+id/penEdit"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@drawable/icn_popup_pencil"
+                        android:tint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/inviteFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/timelineGreen"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:text="invite friend - show tags you chosed"
+                                android:textSize="12dp" />
+
+
+                        </FrameLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ContactHashLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_marginRight="20dp"
+                        android:ellipsize="end"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:id="@+id/scrollHorizontal"
+                            android:layout_width="wrap_content"
+                            android:scrollbars="none"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/containerHashTags"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="Orientation">
+
+                            </LinearLayout>
+
+
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+
+
+                <EditText
+                    android:id="@+id/hashtagsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="5"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="2dp"
+
+                    android:text="@string/test_tags"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/white" />
+
+                <View
+                    android:id="@+id/companyVileEditPreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    android:background="@color/orange" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/customTagsContainer"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="50dp"
+                            android:visibility="gone"
+                            android:layout_marginBottom="5dp"
+                            android:overScrollMode="never">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/sortPopupLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/assistant_suggest"
+                        android:textSize="12dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/assistantSuggestContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:overScrollMode="never">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Most used tags"
+                                android:textSize="12dp" />
+
+                            <android.support.v4.widget.Space
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1" />
+
+                            <FrameLayout
+                                android:id="@+id/openSuggestPopup"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp">
+
+                                <ImageView
+                                    android:id="@+id/arrowSuggest"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_gravity="right"
+                                    android:src="@drawable/icn_arrow_down"
+                                    android:tint="@color/colorPrimary" />
+
+                                <ImageView
+                                    android:id="@+id/arrowSuggestScale"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="right"
+                                    android:src="@drawable/icn_arrow_down"
+                                    android:tint="@color/colorPrimary"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/mostUsedTagsContainer"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:overScrollMode="never">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

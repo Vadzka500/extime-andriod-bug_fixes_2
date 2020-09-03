@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/popup_background"
+    android:layout_height="163dp"
+    android:clickable="true"
+    android:paddingLeft="17.5dp"
+    android:paddingRight="15dp"
+    android:paddingTop="7dp">
+
+<FrameLayout
+    android:id="@+id/head_change"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:layout_marginTop="0dp">
+
+    <TextView
+        android:id="@+id/valueChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:text="NP Capital"
+
+        android:fontFamily="sans-serif-normal"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+        android:layout_marginTop="6dp"
+
+
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxEms="15"/>
+
+    <FrameLayout
+        android:id="@+id/ok_change"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_marginTop="4dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textColor="@color/primary"/>
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:textSize="8dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:text="choose type for this data"/>
+
+</FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/ltgray"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/addressLinear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnAddressType"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:src="@drawable/icn_geo"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="11dp"
+                android:tint="@color/gray"/>
+
+            <ImageView
+                android:id="@+id/addressTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top"
+                android:layout_marginStart="23.5dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="6dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/currentAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+                <TextView
+                    android:id="@+id/typeAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="address"
+                    android:textSize="9.5dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/bioLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnBioType"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:src="@drawable/intro_n"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:tint="@color/gray"/>
+
+            <ImageView
+                android:id="@+id/bioTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeBioText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bio/intro"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentBio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/birthLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnBirthType"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:src="@drawable/gift"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:tint="@color/gray"/>
+
+            <ImageView
+                android:id="@+id/birthTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="birthday"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/companyLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnCompanyType"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:src="@drawable/icn_companies"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:tint="@color/gray"/>
+
+            <ImageView
+                android:id="@+id/companyTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeCompanyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="company"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/emailLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnEmailType"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:src="@drawable/icn_emails"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:tint="@color/gray"/>
+
+            <ImageView
+                android:id="@+id/emailTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeEmailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/followLinear"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnFollowType"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:src="@drawable/follow_up"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="3dp"
+                android:tint="@color/gray"/>
+
+            <ImageView
+                android:id="@+id/followTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeFollowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="follow-up"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/hashLinear"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnHashType"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/icn_sort_hashtah"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    android:tint="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/hashTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="5dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="6dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeHashText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hashtag"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentHash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/nameLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnProfileType"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/profile"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:tint="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/profileTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="7dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/noteLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnNoteType"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/icn_notes"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:tint="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/noteTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="7dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeNoteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="note"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/positionLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnPositionType"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/position"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:tint="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/positionTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="7dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typePositionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="position"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentPosition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/phoneLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnPhoneType"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/icn_phone"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:tint="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/phoneTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typePhoneText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="phone"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+
+            <FrameLayout
+                android:id="@+id/webLinear"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnWebType"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/icn_popup_web"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="3dp"
+                    android:tint="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/webTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeWebText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="web"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/facebookLinear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:orientation="vertical"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:id="@+id/icnFacebookType"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:src="@drawable/icn_social_facebook_gray"
+                android:layout_gravity="top"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/facebookTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeFacebookText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/twitterLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnTwitterType"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="#e2e5e8"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+               />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_twitter_white"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/twitterTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="7dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeTwitterText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Twitter"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentTritter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/linkedInLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnLinkedInType"
+                android:layout_width="16dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icn_social_linkedin_gray"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/linkedInTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="7dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeLinkedInText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LinkedIn"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentLinkedIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/whatsAppLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:id="@+id/icnWhatsAppType"
+                android:layout_width="18dp"
+                android:layout_height="16dp"
+                android:src="@drawable/icn_social_whatsapp_gray"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <ImageView
+                android:id="@+id/whatsAppTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="7dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeWhatsAppText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Whatsapp"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentWhatsApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/telegramLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnTelegramType"
+                android:layout_width="18dp"
+                android:layout_height="16dp"
+                android:src="@drawable/icn_social_telegram_gray"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/telegramTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeTelegramText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telegram"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentTelegram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+
+        <FrameLayout
+            android:id="@+id/skypeLinear"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icnSkypeType"
+                android:layout_width="18dp"
+                android:layout_height="16dp"
+                android:src="@drawable/icn_social_skype_gray"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="3dp" />
+
+            <ImageView
+                android:id="@+id/skypeTick"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:src="@drawable/tick"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/typeSkypeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skype"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/currentSkype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.5dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="-2dp"
+                    android:visibility="gone"
+                    android:text="(current)"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/facebookLinear"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:orientation="vertical"
+                tools:ignore="DuplicateIds">
+
+                <FrameLayout
+                    android:id="@+id/icnInstagramType"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/instagramTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="5dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeInstagramText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Instagram"
+                        android:textSize="9.5dp" />
+
+                    <TextView
+                        android:id="@+id/currentInstagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/youTubeLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnYoutubeType"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/youTubeTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="7dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeYouTubeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Youtube"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentYouTube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/mediumLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnMediumType"
+                    android:layout_width="16dp"
+                    android:layout_height="15dp"
+
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp" />
+
+                <ImageView
+                    android:id="@+id/mediumTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="7dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeMediumText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/viberLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+
+                <ImageView
+                    android:id="@+id/icnViberType"
+                    android:layout_width="18dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icn_social_viber_gray"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/viberTick"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="7dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/typeViberText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Viber"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/currentViber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="18dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icn_social_telegram_gray"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <ImageView
+
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="telegram"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+
+            <FrameLayout
+
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+
+                android:visibility="invisible"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="18dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icn_social_skype_gray"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="3dp" />
+
+                <ImageView
+
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:src="@drawable/tick"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:tint="@color/primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="skype"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9.5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:visibility="gone"
+                        android:text="(current)"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

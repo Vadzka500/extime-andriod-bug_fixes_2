@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editFramePopup"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="175dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:windowSoftInputMode="adjustPan"
+
+
+    android:background="@drawable/popup_background">
+
+    <LinearLayout
+        android:id="@+id/profile_preview_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="11dp"
+            android:paddingRight="10dp">
+
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilePopupAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/profilePopupInitials"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:text="F"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/data_block"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:orientation="vertical"
+                android:scrollbars="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/nameContact"
+                        android:layout_width="230dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="-3.2dp"
+                        android:layout_marginTop="-2.3dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:inputType="textCapWords"
+                        android:maxLines="1"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="2dp"
+
+                        android:text="@string/test_name"
+                        android:textColor="@color/black"
+                        android:textSize="14.5dp"
+                        android:textStyle="normal"
+
+                        app:backgroundTint="@color/white" />
+
+                  <!--  <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="sans-serif-light"
+                        android:text="21:00"
+                        android:textColor="@color/gray"
+                        android:textSize="12dp"
+                        android:textStyle="normal" />-->
+                    <ImageView
+                        android:id="@+id/emailImg"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="0dp"
+                        android:adjustViewBounds="true"
+
+                        android:src="@drawable/icn_bottombar_emails"
+                        />
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/lineNamePreview"
+                    android:layout_width="225dp"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/sortPopupLine" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/companyText"
+                        android:layout_width="100dp"
+                        android:maxWidth="100dp"
+                        android:layout_height="20dp"
+                        android:paddingEnd="5dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="-3.2dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/company"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingBottom="0dp"
+                        android:paddingRight="-5dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/darkAzure"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textSize="13.5dp"
+                        android:textStyle="normal"
+                        app:backgroundTint="@color/white" />
+
+                    <EditText
+
+                        android:id="@+id/companyPossitionText"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="39dp"
+                        android:layout_marginTop="0dp"
+
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/test_position"
+                        android:maxLines="1"
+                        android:paddingBottom="0dp"
+                        android:maxWidth="100dp"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray"
+                        android:textSize="13dp"
+                        android:textStyle="normal"
+                        app:backgroundTint="@color/white" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+
+                   <!-- <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+
+                        android:src="@drawable/icn_popup_web"
+                        android:tint="@color/colorPrimary" />-->
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/companyVileEditPreview"
+                    android:layout_width="100dp"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/sortPopupLine" />
+
+                <View
+                    android:id="@+id/positionVileEditPreview"
+                    android:layout_width="105dp"
+                    android:layout_gravity="right"
+                    android:layout_height="0.8dp"
+                    android:layout_marginRight="30dp"
+
+                    android:layout_marginTop="-1dp"
+                    android:background="@color/sortPopupLine"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.3dp"
+                    tools:ignore="Orientation">
+
+                    <EditText
+                        android:id="@+id/hashtagsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="-3.2dp"
+                        android:layout_marginTop="-2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="5"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/test_tags"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp"
+                        android:textStyle="normal"
+                        app:backgroundTint="@color/white" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineHashtahPreview"
+                    android:layout_width="225dp"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/sortPopupLine" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lineaSocials"
+                android:layout_width="wrap_content"
+                android:layout_height="21.5dp"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+
+
+
+
+                <ImageView
+                    android:id="@+id/vk_icon"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icn_social_vk"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:id="@+id/link_icon"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icn_social_linkedin"
+                    tools:ignore="DuplicateIds" />
+
+
+
+
+
+                <FrameLayout
+
+                    android:layout_width="27.8dp"
+                    android:layout_height="27.8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="-3.2dp">
+
+                    <ImageView
+                        android:id="@+id/inst_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="3dp"
+                        android:src="@drawable/icn_social_instagram"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:src="@drawable/frame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.05" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="21.5dp"
+                android:layout_marginTop="13dp"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/viber_icon"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    tools:ignore="DuplicateIds" />
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/whatsapp_icon"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    tools:ignore="DuplicateIds" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/telegram_icon"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    tools:ignore="DuplicateIds" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/skype_icon"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="21.5dp"
+                    android:layout_height="21.5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="4dp"
+                    tools:ignore="DuplicateIds" />
+
+
+
+
+                <FrameLayout
+                    android:id="@+id/socialsArrowDown"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:adjustViewBounds="true">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleY="0.5"
+                        android:scaleX="0.5"
+
+                        android:src="@drawable/icn_arrow_down"
+                        android:tint="@color/colorPrimary" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:paddingLeft="11dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="21.5dp"
+            android:layout_marginTop="13.2dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/facebook_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icn_social_facebook" />
+
+            <ImageView
+                android:id="@+id/vk_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icn_social_vk"
+                tools:ignore="DuplicateIds" />
+
+            <ImageView
+                android:id="@+id/link_icon"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icn_social_linkedin"
+                tools:ignore="DuplicateIds" />
+
+
+
+
+            <FrameLayout
+
+                android:layout_width="27.8dp"
+                android:layout_height="27.8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="-3.2dp">
+
+                <ImageView
+                    android:id="@+id/inst_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"
+                    android:src="@drawable/icn_social_instagram"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:src="@drawable/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/viber_icon"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                tools:ignore="DuplicateIds" />
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/whatsapp_icon"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                tools:ignore="DuplicateIds" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/telegram_icon"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                tools:ignore="DuplicateIds" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/skype_icon"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_width="21.5dp"
+                android:layout_height="21.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="1dp"
+                tools:ignore="DuplicateIds" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                android:src="@drawable/icn_arrow_down"
+                android:tint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="11.5dp"
+            android:background="@color/sortPopupLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="7dp">
+
+            <FrameLayout
+                android:id="@+id/cancelFastEdit"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/cancel_"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_marginTop="6dp"
+                android:paddingEnd="2dp"
+                android:paddingTop="2dp"
+                android:src="@drawable/icn_popup_pencil"
+                android:tint="@color/orange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/edit"
+                android:textColor="@color/orange"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/updateContacts"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/confirm_"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/arrowShowHashtagsEdit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginBottom="14dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icn_arrow_down"
+            android:tint="@color/colorPrimary" />
+
+    </FrameLayout>
+
+</FrameLayout>

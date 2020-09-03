@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="18dp"
+                android:layout_height="18dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar_sender"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/circle_gray_3"/>
+
+                <TextView
+                    android:id="@+id/initial_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:maxLength="2"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textSize="9dp"/>
+
+                <ImageView
+                    android:id="@+id/google_sender"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/icn_fab_google"
+                    android:visibility="gone"
+                    android:layout_gravity="end|bottom"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/nameRecipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name Surname"
+                android:textSize="13dp"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/primary"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/recipient_email"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:maxLines="1"
+
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textCursorDrawable="@drawable/ms_cursor"
+                android:textSize="13dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/gray_textView"
+                android:singleLine="true"
+                android:layout_weight="1"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="12dp"
+                android:text="Sub:"/>
+
+            <TextView
+                android:id="@+id/subject_email"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-light"
+                android:text="Email subject"
+                android:textStyle="normal"
+                android:textSize="13dp"
+
+                android:textCursorDrawable="@drawable/ms_cursor"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/gray"
+                android:singleLine="true"
+                android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/sortPopupLine" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@id/block_image_"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/frameTextMess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="0dp"
+                    android:orientation="vertical"
+                    android:layout_toLeftOf="@id/block_image_"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/l_message_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textMessage_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:text="Hello"/>
+
+                        <TextView
+                            android:id="@+id/textMessage_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:layout_marginStart="3.7dp"
+                            android:textSize="14dp"
+                            android:text="%Name"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textMessage_p"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone"
+                        android:textIsSelectable="true"
+                        android:layout_marginEnd="8dp"
+                        android:textColorLink="@color/colorPrimaryDark"
+                        android:fontFamily="sans-serif"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/textMessageHint"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:textSize="13dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="5dp"
+                        android:textColorLink="@color/colorPrimaryDark"
+                        android:fontFamily="sans-serif-light"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/footer_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:text="\nbest regards, NAME SURNAME"/>
+
+
+                    <TextView
+                        android:id="@+id/linkMessageReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" asd asd asd asd asd asd asd "
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginEnd="8dp"
+
+                        android:textSize="14dp"
+                        android:textColor="@color/primary"/>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/block_image_"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:paddingStart="3dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/type_bold"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/more"
+                    android:rotation="90"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="italic"
+                    android:tint="@color/primary"
+                    android:textSize="13dp"
+                    android:layout_gravity="center_horizontal"/>
+
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+
+
+                <FrameLayout
+                    android:id="@+id/selectFileProfileTemplate"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal">
+
+                <ImageView
+
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:tint="@color/primary"
+                    android:src="@drawable/paperclip"/>
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/linearCountDataMEssage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/linear_arg_"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:scrollbars="horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <FrameLayout
+                    android:id="@+id/frameArrMoreMessageData"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="3dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arr_down"/>
+                </FrameLayout>
+            </FrameLayout>
+
+
+
+            <TextView
+                android:id="@+id/text_no_files_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="No data attachments yet"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />.
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

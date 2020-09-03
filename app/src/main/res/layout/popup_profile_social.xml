@@ -1,0 +1,603 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_background"
+    android:paddingTop="10dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/closeArrowSocial"
+        android:layout_width="30dp"
+        android:layout_gravity="top|end"
+        android:layout_marginEnd="-11dp"
+        android:layout_marginTop="-4dp"
+        android:layout_height="30dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:adjustViewBounds="true"
+            android:scaleY="-1"
+            android:src="@drawable/icn_arrow_down"
+            android:tint="@color/colorPrimary" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSocialWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Social"
+                    android:textColor="@color/primary"
+                    android:textSize="16dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Messengers"
+                    android:textColor="@color/primary"
+                    android:textSize="16dp" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_arrow_down"
+                android:tint="@color/colorPrimary"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/sortPopupLine" />
+
+        <LinearLayout
+            android:id="@+id/frameSocials"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/scroll"
+                android:layout_width="0dp"
+                android:layout_weight="1.04"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.05"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/facebook_social"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/facebook_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/icn_social_facebook_gray" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Facebook"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/facebook_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/twitter_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/twitter_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/ic_twitter_gray" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/twitter"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/twitterNick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/linkedLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/link_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/icn_social_linkedin_gray" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/linkedin"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/link_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/instagramLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <FrameLayout
+
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:layout_marginLeft="-3.4dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="-3.2dp">
+
+                        <ImageView
+                            android:id="@+id/instagram_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="3dp"
+                            android:src="@drawable/icn_social_instagram"/>
+
+                        <ImageView
+                            android:src="@drawable/frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Instagram"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/instagramNick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/youtube_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/youtube_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/ic_youtube_gray" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/youtube"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/youtubeNick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/vk_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/vk_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/icn_social_vk_gray" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/vkontakte"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/vkNick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/medium_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/medium_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/medium_black" />
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Medium"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/mediumNick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            </ScrollView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/sortPopupLine" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="7dp">
+
+                <FrameLayout
+                    android:id="@+id/viberLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/viber_icon"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"/>
+
+
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Viber"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/viber_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/whatsapp_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/whatsapp_icon"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"/>
+
+
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="WhatsApp"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/whatsapp_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/telegramLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/telegram_icon"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"/>
+
+
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Telegram"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/telegram_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/skypeLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/skype_icon"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left"/>
+
+
+
+                    <TextView
+                        android:layout_marginTop="-2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="35dp"
+                        android:text="Skype"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_marginBottom="-1dp"
+                        android:id="@+id/skype_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="35dp"
+                        android:text="add username"
+                        android:textColor="@color/black"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

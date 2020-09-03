@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/popup_mess"
+    android:layout_height="255dp"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="12dp"
+    android:background="@drawable/popup_background"
+    android:clickable="true">
+
+    <FrameLayout
+        android:id="@+id/frameCloseClip"
+        android:layout_width="match_parent"
+        android:paddingTop="4dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="6dp">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_contacts_all_favorites"
+                android:tint="@color/primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="7dp"
+                android:text="Contacts"
+                android:textColor="@color/orange"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textSelectMEss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/_1_exesting_3_fields_selected"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@color/sortPopupLine" />
+
+    <FrameLayout
+        android:id="@+id/frameTextMess"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_contacts_message"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:scrollbars="vertical"
+            android:textIsSelectable="true"
+            android:layout_marginEnd="1dp"
+            android:textColorLink="@color/colorPrimaryDark"
+
+
+            android:textColorHighlight="@color/colorPrimary"
+            android:layout_height="match_parent" />
+
+
+
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/linearCountDataMEssage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/bottomFrameClipboard"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="11dp">
+
+        <LinearLayout
+            android:id="@+id/calcelFrame"
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|start"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/calcelMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:text="CLOSE"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.01"
+                android:textAlignment="viewStart"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:textColor="@color/primary"
+
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/updateContactMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginRight="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.01"
+                android:text="@string/update1"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/createContactMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.01"
+                android:text="@string/create"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

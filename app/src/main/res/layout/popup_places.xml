@@ -1,0 +1,306 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/popup_contacts_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_geo" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/all_places"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+            <TextView
+                android:id="@+id/total_ct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true"
+                android:tag="main_check" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/sortPopupLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_places_heart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/favorites"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+            <TextView
+                android:id="@+id/samsung_cloud_ct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/samsung_cloud_check"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_places_bookmark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/want_to_go"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+            <TextView
+                android:id="@+id/phone_ct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/smartphone_check"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_sort_star" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/starred_places"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+            <TextView
+                android:id="@+id/google_contacts_ct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/google_contacts_check"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_places_new" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/new_place"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+
+
+            <TextView
+                android:id="@+id/whatsapp_ct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_plus" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/new_place"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

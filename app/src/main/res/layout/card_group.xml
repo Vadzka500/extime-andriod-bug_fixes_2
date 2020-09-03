@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linaerGroupClipboard"
+        android:layout_width="265dp"
+        android:layout_height="32dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/imageTypeClipboardGroup"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical|start"
+            android:src="@drawable/circle" />
+
+        <TextView
+            android:id="@+id/groupCountClipboard2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="10sp"
+            android:layout_marginLeft="-11.2dp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:layout_marginTop="9dp"/>
+
+        <TextView
+            android:id="@+id/clipboardValueGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="https://www.facebook.com/call2me111"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameInageIconClipboardGroup"
+        android:layout_width="25dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="27dp">
+
+        <ImageView
+            android:id="@+id/companyPhotoIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="right|center_vertical"
+            android:visibility="gone"
+            android:layout_marginRight="3dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIconAvatar"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical|right"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            android:layout_marginRight="3dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIconSearch"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical|right"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            android:src="@drawable/sand_clock"
+            android:layout_marginRight="3dp"/>
+
+        <TextView
+            android:id="@+id/profileIconInitials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:text="F"
+            android:textColor="@color/white"
+            android:textSize="6dp"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkFrameClip"
+        android:layout_width="27dp"
+        android:layout_gravity="end"
+        android:layout_height="32dp">
+
+        <!-- <ImageView
+             android:id="@+id/circleImage"
+             android:layout_width="16dp"
+             android:layout_height="16dp"
+             android:layout_gravity="center_vertical|start"
+             android:src="@drawable/icn_clipboard_plus_card" />-->
+
+        <!--<TextView
+            android:id="@+id/timeClipboard"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="end"
+            android:layout_gravity="center_vertical"
+            android:text="@string/_21_00"/>-->
+
+        <CheckBox
+            android:id="@+id/checkClip"
+            style="@style/CheckBoxStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+
+
+
+
+            android:clickable="false"
+            android:checked="false" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_background"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/popup_contacts_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/companyName"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="13.5dp"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="5dp"
+                        android:background="@color/white"
+                        android:paddingBottom="10dp"
+                        android:hint="Add new company or choose below" />
+
+                    <ImageView
+                        android:id="@+id/updateCompany"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/icn_saving_pig" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@color/sortPopupLine"
+                    android:layout_gravity="bottom"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/companiesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="82dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+
+                    android:overScrollMode="never">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="6dp"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                        <!--android:id="@+id/mostUsedTagsContainer"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="76dp"-->
+                        <!--android:layout_marginBottom="5dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="8dp"-->
+                        <!--android:overScrollMode="never">-->
+
+                    <!--</android.support.v7.widget.RecyclerView>-->
+
+                <!--</LinearLayout>-->
+                <!---->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

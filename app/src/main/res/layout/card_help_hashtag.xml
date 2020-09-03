@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+
+    android:layout_height="30dp">
+
+    <LinearLayout
+        android:id="@+id/hyperHashTag"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+
+        <CheckBox
+            android:id="@+id/helpHashCheckBox"
+            android:checked="false"
+            style="@style/CheckBoxStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/hashtag_edit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="1.5sp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="7dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/all"
+            android:textSize="14dp"
+            android:textStyle="normal" />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

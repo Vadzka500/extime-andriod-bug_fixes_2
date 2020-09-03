@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="320dp"
+    android:layout_height="25dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="265dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <ImageView
+            android:id="@+id/imageTypeExtract"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical|start"
+            android:src="@drawable/icn_social_facebook" />
+
+        <TextView
+            android:id="@+id/extractValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="https://www.facebook.com/call2me111"
+
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:id="@+id/checkExtract"
+            style="@style/CheckBoxStyleSmall"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:checked="true"/>
+    </LinearLayout>
+
+
+</FrameLayout>

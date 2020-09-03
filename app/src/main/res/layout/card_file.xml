@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="64dp"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/contact_image_block"
+        android:layout_width="72dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fileType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/icn_files_png"/>
+
+        <ImageView
+            android:id="@+id/fileCloud"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/icn_social_call2me"/>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="left">
+
+
+            <TextView
+                android:id="@+id/fileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:gravity="left"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textColor="@color/primary_dark"
+                android:text="@string/technical_specification"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+                <TextView
+                    android:id="@+id/fileHashtags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:gravity="left"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal"
+                    android:textColor="@color/gray"
+                    android:text="@string/call2me_hashtag_happyman"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="16dp"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/fileTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal"
+                    android:gravity="right"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:textColor="@color/gray"
+                    android:text="21:00"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

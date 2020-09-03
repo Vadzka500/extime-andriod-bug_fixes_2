@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/hyperHashTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/hashtag_edit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="1.5sp"
+            android:text="@string/all"
+            android:textColor="@color/pink"
+            android:textSize="14dp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

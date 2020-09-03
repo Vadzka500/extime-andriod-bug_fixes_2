@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_background"
+    android:paddingStart="17dp"
+    android:paddingEnd="17dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="12dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="@color/primary_dark"
+            android:text="@string/facebook"
+            />
+
+        <TextView
+            android:layout_marginStart="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="@color/primary_dark"
+            android:text="@string/www_facebook_com_call2me"
+            />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="24dp"
+            android:tint="@color/gray"
+            android:layout_gravity="center_vertical|end"
+            android:visibility="gone"
+            android:src="@drawable/icn_clipboard_ok"/>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:tint="@color/gray"
+            android:layout_gravity="center_vertical|end"
+            android:visibility="gone"
+            android:src="@drawable/icn_clipboard_plus_card"/>
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/sortPopupLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="6dp">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/icn_profile_edit_trash"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/icn_popup_pencil"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/icn_popup_call"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/icn_remind_message"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/icn_profile_edit_copy"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/icn_popup_share"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<android.support.v7.widget.Toolbar android:id="@+id/main_toolbar1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:title=""
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/cancel_toolbar_template"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="start"
+        android:layout_gravity="start"
+        android:layout_marginEnd="8dp"
+        android:text="CANCEL"
+        android:textColor="@color/primary"/>
+
+    <TextView
+        android:id="@+id/save_toolbar_template"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="17dp"
+        android:text="SAVE"
+        android:textColor="@color/primary"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textSize="11dp"
+        android:hint="Type template's name or use automatically 1"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/gray"
+        android:background="@android:color/transparent"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:layout_marginEnd="15dp"
+        android:singleLine="true"
+        android:id="@+id/toolbar_title_template"
+
+        android:paddingEnd="10dp"/>
+
+
+
+
+
+
+
+</android.support.v7.widget.Toolbar>

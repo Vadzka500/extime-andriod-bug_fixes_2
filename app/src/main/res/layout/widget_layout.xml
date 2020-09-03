@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_gravity="bottom|end"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:ignore="NamespaceTypo">
+
+    <com.github.clans.fab.FloatingActionMenu
+
+        android:id="@+id/fabMenuContainerWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:paddingEnd="12dp"
+        android:paddingBottom="11dp"
+        fab:menu_fab_size="mini"
+        fab:menu_labels_colorNormal="@color/white"
+        fab:menu_labels_colorPressed="@color/white"
+        fab:menu_labels_colorRipple="@color/white"
+        fab:menu_labels_showShadow="false"
+        fab:menu_labels_textColor="@color/colorPrimaryDark"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_labels_textSize="14dp"
+        fab:menu_labels_paddingBottom="10dp"
+        fab:menu_showShadow="false"
+        app:fab_showShadow="false"
+        android:theme="@style/FAB">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/googleItemFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icn_fab_google"
+            fab:fab_size="mini"
+            fab:fab_label="Google Search" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/googleMapsFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icn_fab_maps"
+            fab:fab_size="mini"
+            fab:fab_label="Google Maps" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/googleTranslateFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icn_fab_translate"
+            fab:fab_size="mini"
+            fab:fab_label="Translate" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icn_popup_remind"
+            fab:fab_size="mini"
+            fab:fab_label="Remind" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icn_fab_update"
+            fab:fab_size="mini"
+            fab:fab_label="Update" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icn_plus"
+            fab:fab_size="mini"
+            fab:fab_label="Create" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</FrameLayout>
+
+
+

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/frameInageIconClipboard"
+        android:layout_marginEnd="4dp"
+        android:layout_gravity="start">
+
+        <FrameLayout
+            android:id="@+id/avatarC"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd = "7dp"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileIconAvatarContact"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="4dp"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/profileIconInitialsContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:text="F"
+                android:textColor="@color/white"
+                android:textSize="6dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/google_recipient"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/icn_fab_google"
+                android:layout_gravity="end|bottom"/>
+
+        </FrameLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/extractValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd = "5dp"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="1"
+
+                    android:text="https://www.facebook.com/call2me111"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/extractValueEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="sans-serif"
+
+                    android:maxLines="1"
+
+                    android:text="vadim500.grodno@g,ail.com"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="11sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameInageIconClipboard"
+        android:layout_width="25dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileIconAvatar"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="3dp"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/profileIconInitials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:text="F"
+            android:textColor="@color/white"
+            android:textSize="6dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageTypeClipboardGroupList"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/circle_search"
+
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/contactSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginEnd="0dp"
+            android:text="?"
+            android:textColor="@color/orange"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:layout_alignParentEnd="true"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:id="@+id/checkExtract"
+            style="@style/CheckBoxStyleSmall"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:checked="false" />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textSnderCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="7dp"
+        android:text="Sender"
+        android:layout_marginEnd="5dp"
+        android:layout_gravity="end"
+        />
+
+</FrameLayout>

@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/popup_mess_"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="12dp"
+        android:clickable="true">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/firstC_1"
+                android:layout_width="18dp"
+                android:layout_height="18dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar_sender"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/gmail"/>
+
+                <TextView
+                    android:id="@+id/initial_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:maxLength="2"
+                    android:text="A"
+                    android:textColor="@color/white"
+                    android:textSize="9dp" />
+
+                <ImageView
+                    android:id="@+id/google_sender"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/icn_fab_google"
+                    android:layout_gravity="end|bottom"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/secondC_1"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar_recipient_2_1"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/gmail"/>
+
+                <TextView
+                    android:id="@+id/initials_recipient_2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:maxLength="2"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textSize="9dp"/>
+
+                <ImageView
+                    android:id="@+id/google_recipient_2_1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/icn_fab_google"
+                    android:layout_gravity="end|bottom"/>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/moreCont_1"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp">
+
+                <ImageView
+                    android:id="@+id/imageTypeClipboardGroupListC_1"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:src="@drawable/circle_search"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/contactC_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginEnd="0dp"
+                    android:text="3"
+                    android:textColor="@color/orange"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/header_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Vad-grasdasd@mail.ru"
+                android:textSize="13dp"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_weight="1"/>
+
+
+
+            <FrameLayout
+                android:id="@+id/firstC"
+                android:layout_width="18dp"
+                android:layout_height="18dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar_recipient_1"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/gmail"/>
+
+                <TextView
+                    android:id="@+id/initials_recipient_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:maxLength="2"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textSize="9dp"/>
+
+                <ImageView
+                    android:id="@+id/google_recipient_1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/icn_fab_google"
+                    android:layout_gravity="end|bottom"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/secondC"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar_recipient_2"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/gmail"/>
+
+                <TextView
+                    android:id="@+id/initials_recipient_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:maxLength="2"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textSize="9dp"/>
+
+                <ImageView
+                    android:id="@+id/google_recipient_2"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/icn_fab_google"
+                    android:layout_gravity="end|bottom"/>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/moreCont"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp">
+
+                <ImageView
+                    android:id="@+id/imageTypeClipboardGroupListC"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:src="@drawable/circle_search"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/contactC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginEnd="0dp"
+                    android:text="3"
+                    android:textColor="@color/orange"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="Sub:"/>
+
+            <EditText
+                android:id="@+id/titleMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"
+                android:textColor="#808080"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginEnd="3dp"
+                android:text="No subject"/>
+
+
+            <TextView
+                android:id="@+id/timeMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/gray"
+                android:text="14:45"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="7dp"
+            android:background="@color/sortPopupLine" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/frameTextMess"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@id/block_image_2">
+
+                <EditText
+                    android:id="@+id/textMessage_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/transparent"
+                    android:inputType="textMultiLine|textAutoComplete|textAutoCorrect|textCapSentences"
+                    android:lineSpacingExtra="1.745dp"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/colorPrimary"
+
+                    android:textColorLink="@color/colorPrimaryDark"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/linkMessageReply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" asd asd asd asd asd asd asd "
+                    android:layout_marginTop="15dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/primary"/>
+
+
+                <LinearLayout
+                    android:id="@+id/prevEmailTemplate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/timeReplySender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+
+                        android:textColor="@color/primary_dark"/>
+
+                    <TextView
+                        android:id="@+id/titleBodySenderReplySender"
+                        android:layout_width="wrap_content"
+                        android:textSize="13dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="0.5dp"
+
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="0dp"
+                            android:background="@color/gray" />
+
+                    </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/textReplyOld"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:textColor="@color/black"
+                            android:text="dsfjsandosad m asn fjsdanf osdanmf sdanmf osdmnf jsanmf jsdnf sadnf sdnf jsadnf sjdnf sjdnf jsdnfjsdnf "/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/block_image_2"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical"
+                android:paddingStart="3dp">
+
+
+
+                <ImageView
+                    android:id="@+id/type_bold"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:rotation="90"
+                    android:src="@drawable/more"
+                    android:textSize="13dp"
+                    android:textStyle="italic"
+                    android:tint="@color/primary" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/selectFileProfileTemplate"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/paperclip"
+                        android:tint="@color/primary" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/linearCountDataMEssage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/linear_arg_"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:scrollbars="horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+
+
+                <FrameLayout
+                    android:id="@+id/frameArrMoreMessageData"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="3dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arr_down"/>
+                </FrameLayout>
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_no_files_popup"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="No data attachments yet"
+                android:textColor="@color/gray"
+                android:fontFamily="sans-serif-light"
+                android:textSize="11dp"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"/>
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        <View
+            android:id="@+id/line_button"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/sortPopupLine" />
+
+
+
+        <LinearLayout
+            android:id="@+id/test1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginTop="9dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icn_extract_social"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detector"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="13dp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/orange"/>
+
+                <TextView
+                    android:id="@+id/textCountMessageData"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="11dp"
+                    android:text="14 items: 3 contacts, 1 meeting, 6 files"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_weight="1"/>
+
+
+
+
+                <ImageView
+                    android:id="@+id/downloadMessageData"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/download"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:tint="@color/primary"/>
+
+                <ImageView
+                    android:id="@+id/copyMessageData"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icn_profile_edit_copy"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:tint="@color/primary"/>
+
+                <ImageView
+                    android:id="@+id/shareMessageData"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icn_popup_share"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:visibility="gone"
+                    android:tint="@color/primary"/>
+
+                <ImageView
+                    android:id="@+id/hideMoreMessageData"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp"
+
+                    android:src="@drawable/arr_up"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_button_2"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/sortPopupLine" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerDataMessage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="-2dp"
+                android:layout_marginEnd="-9dp"
+                android:layout_weight=" 1">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <FrameLayout
+                android:id="@+id/bottomFrameMessage"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp">
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/mergeMessageData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="-0.01"
+                        android:text="CANCEL"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/primary"
+                        android:textSize="14dp"
+
+                        android:textStyle="normal"
+
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/updateContactMessageData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="-0.01"
+                        android:text="@string/update1"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/createContactMessageDataLayout"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/createContactMessageData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="9dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="-0.01"
+                        android:text="@string/create"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        android:textStyle="normal"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_select_template_reply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="262dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_t"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:layout_height="262dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_alignParentTop="true"/>
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/popupSelectContactReply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="0dp"
+        android:visibility="gone">
+
+        <include layout="@layout/reply_select_contact" />
+
+        <include layout="@layout/layout_search_contact_reply" />
+
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,728 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/popup_contacts_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/allContactsPP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_contacts_all" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/all_contacts"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="0"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/allContactsCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/sortPopupLine" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/smartphoneCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/smartphone"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsSmartphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/smartphoneCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/googleContactsCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_google_contacts" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/google_contacts"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/googleContactsCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/deletedCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:tint="@color/primary"
+                    android:src="@drawable/icn_profile_edit_trash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="Deleted contacts"
+                    android:textColor="@color/md_red_900"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsDeleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/deletedCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/sortPopupLine" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/facebookCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_facebook" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/facebook"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/facebookCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linkedinCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_linkedin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/linkedin"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactslinkedin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/linkedinCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/instagramContactsCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/instagram_adapter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/instagram"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsInstagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/instagramContactsCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/sortPopupLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/whatsappCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_whatsapp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/whatsapp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsWhatsApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/whatsappCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/telegramCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_telegram" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/telegram"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsTelegram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/telegramCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/skypeCheckOnly"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_skype" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/skype"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsSkype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/skypeCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>-->
+
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/viberCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_viber" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/viber"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popupContactsViber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/viberCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/callCheckOnly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/new_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="@string/call2me_cloud"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/call2mecloud_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/callCheck"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icn_sort_pulse"/>
+
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="4dp"
+            android:layout_height="0dp"/>
+
+        <FrameLayout
+            android:id="@+id/sortByTime"
+            android:layout_width="29dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/timeSort"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/icn_sort_clock"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/frame_google_count"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/icn_fab_google" />
+
+            <TextView
+                android:id="@+id/text_count_google_account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="7dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/barFavoriteTimeline"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/selected_filter"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_contacts_all_favorites" />
+
+            <TextView
+                android:id="@+id/barTemplates_count_timeline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="6dp"
+            android:layout_height="0dp" />
+
+
+
+        <LinearLayout
+            android:id="@+id/folders_Block"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/inbox_Popup"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/inbox_timeline_2"
+                android:tint="@color/primary"/>
+
+            <TextView
+                android:id="@+id/count_inbox_Contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

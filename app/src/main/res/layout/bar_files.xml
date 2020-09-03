@@ -1,0 +1,262 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/barHash"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_gravity="center_vertical|start"
+            android:src="@drawable/icn_files_star"/>
+
+        <TextView
+            android:layout_marginStart="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="center_vertical|end"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="@color/gray"
+            android:text="(100)"/>
+
+        <View
+            android:id="@+id/LineActiveHash"
+            android:layout_width="39dp"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            android:layout_marginLeft="1dp"
+
+            android:layout_gravity="center_vertical|bottom"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorPrimary" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/sortElementsFiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/sortTextFiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="13dp"
+                android:layout_marginTop="0.7dp"
+
+                android:layout_gravity="center_vertical"
+                android:text="A-Z"/>
+
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="6dp"
+            android:layout_height="0dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/sortFilesFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icn_sort_pulse"/>
+
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="4dp"
+            android:layout_height="0dp"/>
+
+        <FrameLayout
+            android:id="@+id/timeSortFiles"
+            android:layout_width="29dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/sortFilesFromTime"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/icn_sort_clock"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:visibility="gone"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/colorPrimary" />
+
+    <View
+        android:layout_width="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="2dp"
+        android:visibility="gone"
+        android:layout_gravity="bottom|start"
+        android:background="@color/colorPrimary" />
+
+    <View
+        android:layout_width="21dp"
+        android:layout_marginStart="64dp"
+        android:layout_height="2dp"
+        android:layout_gravity="bottom|start"
+        android:visibility="gone"
+        android:background="@color/colorPrimary" />
+
+    <View
+        android:layout_width="18dp"
+        android:layout_marginStart="115dp"
+        android:layout_height="2dp"
+        android:visibility="gone"
+        android:layout_gravity="bottom|start"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/allContactsBlock12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+
+            android:paddingRight="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icn_files" />
+
+                <View
+                    android:id="@+id/folderFilesLineActive"
+                    android:visibility="gone"
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <android.support.v4.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/barFavoriteFiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icn_files_clouds" />
+                <View
+                    android:id="@+id/driveFileLineActive"
+                    android:visibility="gone"
+                    android:layout_width="21dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/block_link"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/icn_files_link" />
+
+                <View
+                    android:id="@+id/linkFileLineActive"
+                    android:visibility="gone"
+                    android:layout_width="19dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="8dp"
+
+                    android:background="@color/colorPrimary" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

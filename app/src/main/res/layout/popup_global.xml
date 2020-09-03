@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="175dp"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingStart="16dp">
+
+    <FrameLayout
+        android:id="@+id/frameCloseClip"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="11dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_global" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:text="Global search"
+                android:textColor="@color/orange"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textSelectClipboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/_1_exesting_3_fields_selected"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+
+            android:layout_height="40dp"
+
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/statClipboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif"
+                android:text="6 services"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:textStyle="normal"
+
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="3dp"
+                android:text="add more"
+                android:textColor="@color/primary"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="11dp"
+        android:background="@color/sortPopupLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_link" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="LinkedIn"
+                    android:textColor="@color/primary"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/globalLinkedValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:text="Company"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="11dp" />
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/globalLinkedSearch"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/forward_arrow"
+                    android:tint="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:text="Search"
+                    android:textColor="@color/primary"
+
+                    android:textSize="11dp" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_fab_google" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Google"
+                    android:textColor="@color/primary"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/globalGoogleValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:text="Company"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="11dp" />
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/globalGoogleSearch"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/forward_arrow"
+                    android:tint="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:text="Search"
+                    android:textColor="@color/primary"
+
+                    android:textSize="11dp" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icn_social_call2me" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Extime"
+                        android:textColor="@color/primary"
+                        android:textSize="8dp" />
+
+                    <TextView
+                        android:id="@+id/globalExtimeDataFound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Data found"
+                        android:textColor="@color/timelineGreen"
+                        android:textSize="8dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/globalExtimeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:text="Company"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="11dp" />
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/globalExtimeSearch"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/forward_arrow"
+                    android:tint="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:text="Search"
+                    android:textColor="@color/gray"
+
+                    android:textSize="11dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/globalExtimeProfileFrame"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/globalIconAvatar"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@android:color/darker_gray"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/globalCompanyPhotoIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:visibility="visible" />
+
+
+
+                <TextView
+                    android:id="@+id/globalIconInitials"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:text="F"
+                    android:textColor="@color/white"
+                    android:textSize="7dp"
+                    android:visibility="visible" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

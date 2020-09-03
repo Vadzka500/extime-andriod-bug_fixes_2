@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:paddingBottom="26dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:id="@+id/profile_image_block"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/new_icon" />
+
+                        <TextView
+                            android:id="@+id/contactInitials"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_marginBottom="1dp"
+                            android:ellipsize="end"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:text="F"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/initials"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/data_block"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@id/profile_image_block"
+                        android:orientation="vertical"
+                        android:scrollbars="horizontal">
+
+                        <TextView
+                            android:id="@+id/profileName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:lineSpacingExtra="8sp"
+                            android:text="@string/drawer_name"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp"
+                            android:textStyle="normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/profile_company"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/company"
+                                android:textColor="#e1e4e7"
+                                android:textSize="14dp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/possition_user"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/test_position"
+                                android:textColor="#e1e4e7"
+                                android:textSize="14dp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/drawer_ht"
+                    android:textColor="#e1e4e7"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/smartDropMessengers"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/selectable_item_background"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+                    android:tint="#686868"
+                    android:src="@drawable/network" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Smart drop"
+                    android:textColor="#414141"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/drawerProfile"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="40dp"
+
+                    android:background="@drawable/selectable_item_background"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icn_drawer_social" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/drawer_social_profiles"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                    <ImageView
+                        android:id="@+id/textSvg"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end |center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:visibility="gone"
+                        android:src="@drawable/new_icon" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/drawerMessengers"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:background="@drawable/selectable_item_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icn_drawer_message" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/drawer_messengers"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/drawerDirvices"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:background="@drawable/selectable_item_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icn_drawer_phone24" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/drawer_services"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/drawerWidget"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:background="@drawable/selectable_item_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icn_drawer_widget" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/drawer_widget"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                    <FrameLayout
+                        android:id="@+id/frameSwitch"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end|center_vertical">
+
+                    <TextView
+                        android:id="@+id/switchFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/primary_dark"
+                        android:text="OFF"
+                        android:visibility="visible"
+                        android:track="@drawable/custom_switch_track" />
+
+                    </FrameLayout>
+
+                    <Switch
+                        android:id="@+id/switchFab_old"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:checked="true"
+                        android:background="@android:color/transparent"
+                        android:thumb="@drawable/custom_switch_thumb"
+                        android:visibility="gone"
+                        android:track="@drawable/custom_switch_track" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@color/sortPopupLine" />
+
+                <FrameLayout
+                    android:id="@+id/drawerHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/selectable_item_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icn_drawer_help" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/drawer_help"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/drawerRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:background="@drawable/selectable_item_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icn_drawer_rating" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/drawer_rating"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/drawerSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:background="@drawable/selectable_item_background"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icn_drawer_settings" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/settings"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/drawerinvite"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:backgroundTint="@color/black"
+                    android:background="@drawable/selectable_item_background"
+
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:tint="#686868"
+                        android:src="@drawable/refer_drawer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/drawer_invite_friends"
+                        android:textColor="#414141"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+
+                    <FrameLayout
+                        android:id="@+id/frameSwitchMessageLink"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end|center_vertical">
+
+                        <TextView
+                            android:id="@+id/switchMessageLink"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:textColor="@color/primary_dark"
+                            android:text="OFF"
+                            android:visibility="visible"
+                            android:track="@drawable/custom_switch_track" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:id="@+id/drawerdrive"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:backgroundTint="@color/black"
+                    android:background="@drawable/selectable_item_background"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:tint="#686868"
+                        android:src="@drawable/google_drive_black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="Connect Google drive"
+
+                        android:textColor="@color/orange"
+
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawerdriveAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:backgroundTint="@color/black"
+                    android:background="@drawable/selectable_item_background"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icn_files_google_drive" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="33dp"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="10sp"
+                        android:text="Google Drive connected"
+
+                        android:textColor="@color/primary"
+
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/emailAccountDrawer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:singleLine="true"
+                            android:fontFamily="sans-serif"
+                            android:lineSpacingExtra="10sp"
+                            android:text="Google Drive connected"
+
+                            android:textColor="#414141"
+
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/accountLogoDrive"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/icn_files_google_drive" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+            <TextView
+                android:id="@+id/versionApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="6dp"
+                android:textSize="12dp"
+                android:text="Version 1.4" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/sortPopupLine" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icn_drawer_signin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:fontFamily="sans-serif"
+                        android:layout_gravity="center_vertical"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/drawer_log_in"
+                        android:textColor="#567bac"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="22dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/icn_social_facebook_gray" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/icn_social_google_gray" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/icn_social_vk_gray" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/icn_social_linkedin_gray" />
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

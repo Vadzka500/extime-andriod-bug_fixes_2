@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_marginTop="2dp"
+    android:layout_height="30dp">
+
+    <LinearLayout
+        android:id="@+id/hyperHashTag"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/inputValueLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="9dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/hashtag_edit_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="8"
+                android:background="@color/white"
+                android:fontFamily="sans-serif"
+                android:text="@string/all"
+                android:textColor="@color/timelineGreen"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sortPopupLine" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hashtag_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_marginLeft="10dp"
+            android:text="fdsaf"
+            android:textColor="@color/timelineGreen"
+            android:textSize="14dp"
+            android:visibility="gone"
+            android:layout_weight="10"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.01"/>
+
+        <ImageView
+            android:id="@+id/trashForRemove"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/icn_profile_edit_trash"
+            android:layout_gravity="center"
+            android:tint="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

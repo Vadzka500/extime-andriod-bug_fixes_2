@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/type_image"
+        android:layout_width="20dp"
+        android:layout_height="31dp"
+        android:scaleY="1.5"
+        android:layout_marginTop="13dp"
+
+        android:layout_marginLeft="14dp"
+        android:tint="@color/gray"
+        android:src="@drawable/icn_login"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:minHeight="46dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="54dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hashtag_text"
+                android:layout_gravity="top"
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:layout_height="13dp"
+                android:text="joined" />
+
+            <TextView
+                android:id="@+id/carrier"
+                android:layout_gravity="top"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:textSize="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:text="(MTN)" />
+
+            <CheckBox
+                android:id="@+id/checkConf"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/value1"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="3dp"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+
+            android:text="8(921)649-64-90"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/contactFromCall2me"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="right|center"
+
+        android:src="@drawable/icn_phone_gray"/>
+
+</FrameLayout>

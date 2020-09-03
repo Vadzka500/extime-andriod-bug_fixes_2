@@ -1,0 +1,607 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:minWidth="250dp"
+        android:id="@+id/popup_contacts_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="2dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="8dp"
+        android:paddingTop="7dp"
+        android:background="@drawable/popup_hs_bg">
+
+        <LinearLayout
+            android:id="@+id/hash_f"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icn_sort_hashtah"/>
+
+            <TextView
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/all_hashtags"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="30dp" />
+
+            <FrameLayout
+                android:id="@+id/sortElements"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/sortTextH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:textSize="13dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="A-Z"/>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
+
+            <FrameLayout
+                android:id="@+id/populHashTag"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/populTagH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/icn_sort_pulse"/>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="4dp"
+                android:layout_height="0dp"/>
+
+            <FrameLayout
+                android:id="@+id/sortByTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="7dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/timeSortH"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/icn_sort_clock" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_hash_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="15dp"
+            android:background="#e1e4e7" />
+
+        <TextView
+            android:id="@+id/text_search_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:visibility="gone"
+            android:text="previous searches"
+            android:layout_marginEnd="3dp"
+            android:gravity="end"/>
+
+
+        <LinearLayout
+            android:id="@+id/allContactsHashtag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/hyperHashtagAllConatcts"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="All"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="30dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/all_hashtag_countContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text=" 12"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/allHashtagCheckContacts"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true"
+                style="@style/CheckBoxStyleSmall"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/NoTagsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/NoTagsLineName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="No Tags"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="30dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/NoTagsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/NoTagsCheck"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true"
+                style="@style/CheckBoxStyleSmall"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/allContactWithHashtag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/hyperHashtagAllConatct"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="All tagged"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="30dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/all_hashtag_count_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/allHashtagCheckContactss"
+                style="@style/CheckBoxStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/allhashtasgsHyper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/hyperHashtagAll"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.5sp"
+                    android:text="All unique tags"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="30dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/all_hashtag_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="sans-serif"
+                android:text="(0)"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/allHashtagCheck"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:checked="true"
+                style="@style/CheckBoxStyleSmall"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_hash_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/sortPopupLine" />
+
+        <LinearLayout
+            android:id="@+id/container_tagging_mode"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1.8">
+
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/icn_masstagging" />
+
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    android:layout_marginStart="20dp"
+                    android:text="Mass tagging mode"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#e1e4e7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Assistant suggested "
+                        android:textSize="12dp"
+
+                        android:textColor="@color/gray"/>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/container_suggest_tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="10dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Most used tags"
+                        android:textSize="12dp"
+                        android:textColor="@color/gray"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/container_most_used"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="10dp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line228"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:background="@color/sortPopupLine" />
+
+
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/containerHashTag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:layout_marginStart="15dp"
+            android:paddingBottom="10dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/containerHashTagSearch"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:paddingBottom="10dp" />
+
+        <View
+            android:id="@+id/lineNew"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:background="@color/sortPopupLine" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+
+            android:layout_marginStart="9dp">
+
+            <RadioGroup
+                android:id="@+id/radio_group_hashtag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioOR"
+                    android:layout_width="wrap_content"
+                    android:text="OR"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:checked="true"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radioAND"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AND"
+                    android:layout_marginStart="20dp"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:textColor="#414141"
+                    />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/searchHashtagEditText"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="30dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:fontFamily="sans-serif-light"
+                android:hint=" searching hashtag"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                android:textColorHint="@color/gray"
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/icn_search_hashtag"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/search_hashtag"
+                android:layout_gravity="end"
+                android:tint="@color/colorPrimary"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/popup_menu_hashtag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="1dp"
+        android:visibility="gone">
+
+
+        <include layout="@layout/popup_menu_hashtag" />
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

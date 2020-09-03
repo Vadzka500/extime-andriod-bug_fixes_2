@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/sortPopupLine" />
+
+    <FrameLayout
+        android:id="@+id/icons_frame"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+
+        android:layout_alignParentLeft = "true">
+
+        <ImageView
+            android:id="@+id/imageSocialExtract"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/icn_social_instagram"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/icons_frame"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nameSocialExtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/primary"
+            android:text="Instagram"
+            android:textStyle="bold"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/textDataExistsSocial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data exists"
+            android:layout_gravity="top|left"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:visibility="visible"
+            android:textColor="#00C853"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nameAccount"
+            android:layout_width="180dp"
+            android:layout_height="17dp"
+            android:layout_gravity="bottom|left"
+            android:textSize="12dp"
+            android:text="Inna Chetverikova (@valiriache)"
+            android:layout_marginBottom="2dp"
+
+            android:maxLines="20"
+            android:singleLine="false"
+            android:scrollbars = "vertical"/>
+
+        <TextView
+            android:id="@+id/textNoWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:textSize="16dp"
+
+            android:visibility="gone"
+            android:layout_marginTop="3dp"
+            android:text="No internet connection"/>
+
+        <TextView
+            android:id="@+id/textWaitLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:textSize="14dp"
+
+            android:visibility="gone"
+            android:layout_marginTop="3dp"
+            android:text="Reading link, please wait..."/>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameTextExtract"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:minWidth="100dp"
+
+        android:layout_alignParentRight="true">
+
+
+        <TextView
+            android:id="@+id/nameContactExtractFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:layout_gravity="top|end"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="4dp"
+            android:textSize="12dp"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            android:text="Андрей Паталета"/>
+
+
+        <TextView
+            android:id="@+id/CompanyPositionExtract"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:textStyle="normal"
+            android:layout_gravity="bottom|left"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="2dp"
+            android:textSize="10dp"
+            android:visibility="gone"
+            android:text="blogger"/>
+
+        <TextView
+            android:id="@+id/textExtractSocial2"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extract data"
+            android:layout_marginBottom="1dp"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:id="@+id/textExtractSocial"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extract data"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            android:textColor="@color/primary"/>
+
+
+
+        <ImageView
+            android:id="@+id/imageNoWifi"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/no_wifi"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="25dp"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

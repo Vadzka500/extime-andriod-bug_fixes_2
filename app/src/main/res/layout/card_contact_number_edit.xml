@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/type_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icn_phone"/>
+
+    <ImageView
+        android:id="@+id/region"
+        android:layout_width="16dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="17dp"
+        android:visibility="gone"
+        android:src="@drawable/country_europeanunion"/>
+
+    <TextView
+        android:id="@+id/regionNA"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="17.5dp"
+        android:visibility="visible"
+        android:textSize="8dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:text="N/A" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/typeSocial"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="post - "
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hashtag_text"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="home"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/carrier"
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="(MTN)"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+
+            <ImageView
+                android:id="@+id/acceptData"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_action_accept"
+                android:visibility="gone"
+                android:tint="@color/primary"/>
+
+            <CheckBox
+                android:id="@+id/checkConf"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/value1"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="1dp"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="3"
+
+
+            android:paddingBottom="0dp"
+            android:text="+37529765972"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="280dp"
+        android:layout_height="0.8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/sortPopupLine" />
+
+</FrameLayout>

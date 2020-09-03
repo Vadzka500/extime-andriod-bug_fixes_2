@@ -1,0 +1,254 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:background="@drawable/popup_background"
+    android:paddingTop="10dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/closeArrowSocial"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
+        android:adjustViewBounds="true"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/companyNumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="-2dp"
+            android:fontFamily="sans-serif-normal"
+            android:text="44"
+            android:textColor="@color/orange"
+            android:textSize="8dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-1dp"
+            android:src="@drawable/icn_arrow_down"
+            android:rotation="180"
+            android:tint="@color/colorPrimary" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearSocialWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contacts"
+                    android:textColor="@color/primary"
+                    android:textSize="16dp" />
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/sortElements"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:id="@+id/sortText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:textSize="12dp"
+                        android:layout_marginTop="0.7dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="A-Z"/>
+
+                </FrameLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="6dp"
+                    android:layout_height="0dp" />
+
+                <FrameLayout
+                    android:id="@+id/populHashTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/populTag"
+                        android:layout_width="16dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icn_sort_pulse" />
+
+                </FrameLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="4dp"
+                    android:layout_height="0dp"/>
+
+                <FrameLayout
+                    android:id="@+id/sortByTime"
+                    android:layout_width="29dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="7dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/timeSort"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icn_sort_clock"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/sortPopupLine" />
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_company_preview_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/cancelEditField"
+                android:layout_width="70dp"
+                android:clickable="true"
+
+                android:layout_height="28dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:fontFamily="sans-serif-normal"
+                    android:text="CLOSE"
+                    android:textColor="@color/primary"
+                    android:textSize="12dp"
+                    android:textStyle="normal" />
+
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+            <FrameLayout
+                android:id="@+id/deleteContactField"
+                android:layout_width="70dp"
+                android:clickable="true"
+
+                android:layout_height="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:fontFamily="sans-serif-normal"
+                    android:text="DELETE"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp"
+                    android:textStyle="normal" />
+
+
+            </FrameLayout>
+
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/updateContactField"
+                android:layout_width="70dp"
+                android:clickable="true"
+
+                android:layout_height="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:fontFamily="sans-serif-normal"
+                    android:text="SEARCH"
+                    android:textColor="@color/primary"
+                    android:textSize="12dp"
+                    android:textStyle="normal" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

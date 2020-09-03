@@ -1,0 +1,116 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/popup_contacts_data"
+        android:layout_width="220dp"
+        android:layout_height="160dp"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:text="Export to:"/>
+
+        <LinearLayout
+            android:id="@+id/exportTxt"
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icn_export_text"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/teext"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exportExcel"
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icn_foles_ms_excel"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/ms_excel"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icn_files_pdf"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/pdf"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icn_files_google_sheets"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/google_sheets"/>
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

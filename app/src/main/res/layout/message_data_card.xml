@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/cardDataOfMessage"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="110dp"
+    android:layout_height="28dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageMessageData"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleY="0.7"
+        android:scaleX="0.7"
+        android:src="@drawable/pdf_icon"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/valueMessageData"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="11dp"
+            android:text="123123123"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/sizeData"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="123"
+            android:textSize="9dp"
+            android:textColor="@color/gray"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
